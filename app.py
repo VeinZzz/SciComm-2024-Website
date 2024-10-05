@@ -56,21 +56,35 @@ def registration_form():
 
     return render_template('register.html')
 
-@app.route('/clear_registrations', methods=['POST'])
-def clear_registrations():
+@app.route('/reset_registrations', methods=['POST'])
+def reset_registrations():
     try:
         # Connect to the database
         conn = sqlite3.connect('registrations.db')
         cursor = conn.cursor()
         
-        # Clear all rows in the registrations table
-        cursor.execute('DELETE FROM registrations')
+        # Drop the registrations table if it exists
+        cursor.execute('DROP TABLE IF EXISTS registrations')
+        
+        # Recreate the registrations table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS registrations (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                team_name TEXT NOT NULL,
+                school TEXT NOT NULL,
+                coach_name TEXT NOT NULL,
+                members_count INTEGER NOT NULL,
+                members_info TEXT NOT NULL,
+                topic TEXT NOT NULL,
+                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+            );
+        ''')
         
         # Commit the changes and close the connection
         conn.commit()
         conn.close()
         
-        return jsonify({'status': 'success', 'message': 'All registrations cleared!'})
+        return jsonify({'status': 'success', 'message': 'Registrations table reset!'})
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)})
 
