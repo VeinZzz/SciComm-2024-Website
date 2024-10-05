@@ -1,0 +1,146 @@
+
+// Submit registration form and send data to the backend
+document.getElementById('registration-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // Collect data from the form fields
+    const formData = new FormData(e.target);
+
+    try {
+        const response = await fetch('/register', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+        if (result.status === 'success') {
+            alert(result.message);
+            document.getElementById('registration-form').reset(); // Reset form
+        } else {
+            alert('Registration failed: ' + result.message);
+        }
+    } catch (error) {
+        alert('Registration failed. Please try again.');
+        console.error('Error:', error);
+    }
+});
+
+// Toggle Navigation on Burger Click
+document.querySelector('.burger').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+    document.querySelector('.burger').classList.toggle('active');
+});
+
+// Smooth Scrolling for Nav Links
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Close the nav-links when an item is clicked (for mobile view)
+        document.querySelector('.nav-links').classList.remove('active');
+        document.querySelector('.burger').classList.remove('active');
+    });
+});
+
+
+// Add animation to form inputs on focus
+document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(input => {
+    input.addEventListener('focus', () => {
+        input.style.borderColor = '#e63d32';
+        input.style.boxShadow = '0 0 10px rgba(230, 61, 50, 0.3)';
+    });
+    input.addEventListener('blur', () => {
+        input.style.borderColor = '#e0e0e0';
+        input.style.boxShadow = 'none';
+    });
+});
+
+// Button Ripple Effect
+document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        ripple.style.left = `${e.clientX - e.target.offsetLeft}px`;
+        ripple.style.top = `${e.clientY - e.target.offsetTop}px`;
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 1000); // Remove ripple after 1 second
+    });
+});
+
+// Toggle Navigation on Burger Click with Animation
+document.querySelector('.burger').addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    const burger = document.querySelector('.burger');
+    navLinks.classList.toggle('active');
+    burger.classList.toggle('active');
+
+    // Burger icon animation
+    burger.classList.contains('active')
+        ? burger.querySelectorAll('div').forEach((bar, index) => {
+            bar.style.transitionDelay = `${index * 100}ms`;
+        })
+        : burger.querySelectorAll('div').forEach(bar => (bar.style.transitionDelay = '0ms'));
+});
+
+// Smooth Scrolling and Section Highlighting
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+
+        // Close the nav-links on click (for mobile view)
+        document.querySelector('.nav-links').classList.remove('active');
+        document.querySelector('.burger').classList.remove('active');
+    });
+});
+
+// Button Ripple Effect (Enhanced)
+document.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        ripple.style.left = `${e.clientX - e.target.offsetLeft}px`;
+        ripple.style.top = `${e.clientY - e.target.offsetTop}px`;
+        ripple.style.width = `${btn.offsetWidth}px`;
+        ripple.style.height = `${btn.offsetWidth}px`;
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 600); // Remove ripple after 600ms
+    });
+});
+
+// Form Element Interactivity (Enhanced)
+document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(input => {
+    input.addEventListener('focus', () => {
+        input.style.borderColor = '#e63d32';
+        input.style.boxShadow = '0 0 15px rgba(230, 61, 50, 0.5)';
+        input.style.transform = 'scale(1.02)';
+    });
+    input.addEventListener('blur', () => {
+        input.style.borderColor = '#e0e0e0';
+        input.style.boxShadow = 'none';
+        input.style.transform = 'scale(1)';
+    });
+});
+
+// Add ripple effect to buttons
+document.querySelectorAll('.hero-buttons button').forEach(button => {
+    button.addEventListener('click', function (e) {
+        const rect = button.getBoundingClientRect();
+        const ripple = button.querySelector('::after');
+        ripple.style.top = `${e.clientY - rect.top}px`;
+        ripple.style.left = `${e.clientX - rect.left}px`;
+    });
+});
+
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciComm Registration</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Registration Form Container -->
+    <div class="form-container">
+        <!-- Heading -->
+        <h2>Register Your Team</h2>
+        
+        <!-- Back to Home Button -->
+        <!-- Back to Home Button -->
+        <a href="{{ url_for('index') }}" class="back-home-btn">
+            Back to Home
+        </a>
+
+        
+        <!-- Registration Form -->
+        <form id="registration-form" action="/register" method="POST">
+            <!-- Form Group - Team Name -->
+            <div class="form-group">
+                <label for="team-name">Team Name:</label>
+                <input type="text" id="team-name" name="team-name" placeholder="Enter your team name" required>
+            </div>
+            
+            <!-- Form Group - School/University -->
+            <div class="form-group">
+                <label for="school">School/University:</label>
+                <input type="text" id="school" name="school" placeholder="Enter your school name" required>
+            </div>
+            
+            <!-- Form Group - Coach Name -->
+            <div class="form-group">
+                <label for="coach-name">Coach Name:</label>
+                <input type="text" id="coach-name" name="coach-name" placeholder="Enter coach's name" required>
+            </div>
+            
+            <!-- Form Group - Number of Members -->
+            <div class="form-group">
+                <label for="members-count">Number of Members:</label>
+                <input type="number" id="members-count" name="members-count" min="1" required>
+            </div>
+            
+            <!-- Form Group - Team Members Info -->
+            <div class="form-group">
+                <label for="members-info">Team Members (Name and Age):</label>
+                <textarea id="members-info" name="members-info" rows="4" placeholder="Enter team member names and ages" required></textarea>
+            </div>
+            
+            <!-- Form Group - Choose Topic -->
+            <div class="form-group">
+                <label for="pdf-file">Choose a Topic:</label>
+                <select id="pdf-file" name="pdf-file">
+                    <option value="">Select a topic</option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702116302383" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702116302383" target="_blank">Seeing the Unseen: Uncover the Bulk Heterogeneous Deformation Processes in Metalc Glasses Through Surface Temperature Decoding</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702116302164" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702116302164" target="_blank">Host–Guest Recognition on Photo-Responsive Cell Surfaces Directs Cell–Cell Contacts</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702116303546" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702116303546" target="_blank">Characterization and Distribution of Mechanically Competent Mineraoptionzed Tissue in Micropores of β-tricalcium Phosphate Bone Substitutes</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702117306089" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702117306089" target="_blank">Metaloptionc Glass Nanotube Arrays: Preparation and Surface Characterizations</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702117307836" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702117307836" target="_blank">Appoptioncation of Graphene-Based Flexible Antennas in Consumer Electronic Devices</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702117304844" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702117304844" target="_blank">Full-Thickness Human Skin-On-Chip With Enhanced Epidermal Morphogenesis and Barrier Function</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702117308052" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702117308052" target="_blank">Microfluidic Generation of Transient Cell Volume Exchange for Convectively Driven Intracellular Deoptionvery of Large Macromolecules</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S13697021183014" data-preview="https://www.sciencedirect.com/science/article/pii/S13697021183014" target="_blank">Temperature-Responsive Tungsten Doped Vanadium Dioxide Thin Film Starves Bacteria to Death</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702118309477" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702118309477" target="_blank">Compositionally and Structurally Redesigned High-Energy Ni-Rich Layered Cathode for Next-Generation optionthium Batteries</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702118311131" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702118311131" target="_blank">Advancing Knowledge of Electrochemically Generated optionthium Microstructure and Performance Decay of optionthium Ion Battery by Synchrotron X-ray Tomography</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702119302196" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119302196" target="_blank">Flash Infrared Anneaoptionng as a Cost-Effective and Low Environmental Impact Processing Method for Planar Perovskite Solar Cells</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702119303451" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119303451" target="_blank">Four-Dimensional Direct Laser Writing of Reconfigurable Compound Micromachines</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702119307394" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119307394" target="_blank">Kirigami-Enabled Self-Folding Origami</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702119308661" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119308661" target="_blank">Highly Efficient and Rapid Manufactured Perovskite Solar Cells Via Flash InfraRed Anneaoptionng</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702119308727" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119308727" target="_blank">Thermal Stress-Induced Charge and Structure Heterogeneity in Emerging Cathode Materials</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702119308697" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119308697" target="_blank">Thermally Drawn Advanced Functional Fibers: New Frontier of Flexible Electronics</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702120300158" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120300158" target="_blank">Comparative Studies Of Optoelectrical Properties Of Prominent Pv Materials: Haoptionde Perovskite, Cdte, And Gaas</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702120300754" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120300754" target="_blank">Activation And Stabioptionzation Mechanisms Of Anionic Redox For option Storage Appoptioncations: Joint Experimental And Theoretical Study On option2Tio3–optionmno2 Binary System</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702120300766" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120300766" target="_blank">Porous Nanocellulose Gels And Foams: Breakthrough Status In The Development Of Scaffolds For Tissue Engineering</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702120301048" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120301048" target="_blank">Sputter Coating Of optionthium Metal Electrodes With optionthiophioptionc Metals For Homogeneous And Reversible optionthium Electrodeposition And Electrodissolution</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702120302236" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120302236" target="_blank">Engineered Spider Silk-Based 2D And 3D Materials Prevent Microbial Infestation</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702120303321" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120303321" target="_blank">Multistage Work Hardening Assisted By Multi-Type Twinning In Ultrafine-Grained Heterostructural Eutectic High-Entropy Alloys</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702120304223" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120304223" target="_blank">On The Origin Of Kinking In Layered Crystaloptionne Sooptionds</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S136970212030273X" data-preview="https://www.sciencedirect.com/science/article/pii/S136970212030273X" target="_blank">Design Of Multi-Scale Textured Surfaces For Unconventional optionquid Harnessing</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702120303606" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120303606" target="_blank">Polymer Architecture As Key To Unprecedented High-Resolution 3D-Printing Performance: The Case Of Biodegradable Hexa-Functional Telecheoptionc Urethane-Based Poly-Ε-Caprolactone</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702120304065" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120304065" target="_blank">3D-Printing Of A Complete Modular Ion Mobioptionty Spectrometer</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702120304806" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120304806" target="_blank">Distributed Sensor And Actuator Networks For Closed-Loop Bioelectronic Medicine</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121000663" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121000663" target="_blank">Al-Pha Beads: Bioplastic-Based Protease Biosensors For Global Health Appoptioncations</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S136970212100105X" data-preview="https://www.sciencedirect.com/science/article/pii/S136970212100105X" target="_blank">Stimuoption-Responsive Transdermal Microneedle Patches</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121001024" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121001024" target="_blank">In-Situ Tem Investigation Of Toughening In Sioptioncon At Small Scales</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121001425" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121001425" target="_blank">Hierarchical Build-Up Of Bio-Based Nanofibrous Materials With Tunable Metal–Organic Framework Biofunctionaoptionty</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121001644" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121001644" target="_blank">New Insights Into Sono-Exfooptionation Mechanisms Of Graphite: In Situ High-Speed Imaging Studies And Acoustic Measurements</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121001619" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121001619" target="_blank">Exciton Versus Free Carrier Emission: Impoptioncations For Photoluminescence Efficiency And Ampoptionfied Spontaneous Emission Thresholds In Quasi-2D And 3D Perovskites</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121002546" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121002546" target="_blank">High-Yield Production Of A Super-Soluble Miniature Spidroin For Biomimetic High-Performance Materials</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121001772" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121001772" target="_blank">Highly Stretchable Self-Sensing Actuator Based On Conductive Photothermally-Responsive Hydrogel</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121002042" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121002042" target="_blank">Combinatorial Growth Of Multinary Nanostructured Thin Functional Films</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121003370" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121003370" target="_blank">Toward Multiscale Simulations Of Tailored Microstructure Formation In Metal Additive Manufacturing</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121003242" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121003242" target="_blank">Low Temperature Activation Of Inert Hexagonal Boron Nitride For Metal Deposition And Single Atom Catalysis</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121004521" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121004521" target="_blank">Intrinsically Disordered Peptides Enhance Regenerative Capacities Of Bone Composite Xenografts</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S136970212100362X" data-preview="https://www.sciencedirect.com/science/article/pii/S136970212100362X" target="_blank">Correlative Analysis Of Structure And Chemistry Of optionxfepo4 Platelets Using 4D-Stem And X-Ray Ptychography</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702121004545" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121004545" target="_blank">Supramolecular Polymer Materials Bring Restorative Heart Valve Therapy To Patients</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122000451" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122000451" target="_blank">Physical, Mechanical, And Microstructural Characterization Of Novel, 3D-Printed, Tunable, Lab-Grown Plant Materials Generated From Zinnia Elegans Cell Cultures</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122000918" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122000918" target="_blank">Self-Assembly Enables Simple Structure Organic Photovoltaics Via Green-Solvent And Open-Air-Printing: Closing The Lab-To-Fab Gap</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122001821" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122001821" target="_blank">Parts-Per-Biloptionon (Ppb) Selective Iodine Sensors Leveraging Metal–Organic Framework Nanoenvironment</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002085" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002085" target="_blank">Pedot:Pss-Modified Cotton Conductive Thread For Mass Manufacturing Of Textile-Based Electrical Wearable Sensors By Computerized Embroidery</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002334" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002334" target="_blank">Porous optionquids as Solvents for the Economical Separation of Carbon Dioxide from Methane</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002310" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002310" target="_blank">A Covalent Organic Framework Onion Structure</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002280" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002280" target="_blank">Internet-of-Nano-Things (IoNT) Driven Inteloptiongent Face Masks to Combat Airborne Health Hazard</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002875" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002875" target="_blank">Introducing C Phase in Additively Manufactured Ti-6Al-4V: A New Oxygen-Stabioptionzed Face-Centred Cubic Sooptiond solution with Improved Mechanical Properties</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002759" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002759" target="_blank">Washable, Stretchable, and Reusable Core–Shell Metal Nanowire Network-Based Electronics on a Breathable Polymer Nanomesh Substrate</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002887" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002887" target="_blank">Multiplexed Biosensor for Point-Of-Care COVID-19 Monitoring: CRISPR-Powered Unampoptionfied RNA Diagnostics and Protein-Based Therapeutic Drug Management</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702123000214" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702123000214" target="_blank">3D Printing of optionving Structural Biocomposites</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122003212" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122003212" target="_blank">Electrodeposition-enabled, Electrically-Transduced Sensors and Biosensors</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702122003091" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122003091" target="_blank">Plasmonic Nanomaterials: A Versatile Phototheranostic Platform of Cancers</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702123000688" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702123000688" target="_blank">Hydrogel-Enabled, Local Administration and Combinatorial Deoptionvery of Immunotherapies for Cancer Treatment</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702123002997" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702123002997" target="_blank">Electroactive Biomaterials Synergizing with Electrostimulation for Cardiac Tissue Regeneration and Function-Monitoring</a></option>
+                    <option><a href="https://www.sciencedirect.com/science/article/pii/S1369702123003504" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702123003504" target="_blank">Bioinspired, Heredity-Derived Hierarchical Bulk Multifunctional Copper Alloys</a></option>
+                    <!-- Additional options as needed -->
+                </select>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Registration</button>
+        </form>
+    </div>
+    
+    <!-- Scripts for dynamic content -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
