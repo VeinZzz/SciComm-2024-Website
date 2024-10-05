@@ -56,6 +56,25 @@ def registration_form():
 
     return render_template('register.html')
 
+@app.route('/clear_registrations', methods=['POST'])
+def clear_registrations():
+    try:
+        # Connect to the database
+        conn = sqlite3.connect('registrations.db')
+        cursor = conn.cursor()
+        
+        # Clear all rows in the registrations table
+        cursor.execute('DELETE FROM registrations')
+        
+        # Commit the changes and close the connection
+        conn.commit()
+        conn.close()
+        
+        return jsonify({'status': 'success', 'message': 'All registrations cleared!'})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)})
+
+
 # Route for the admin page
 @app.route('/admin')
 def view_registrations():
