@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciComm Articles</title>
+    <!-- Include Cinzel and Crimson Text fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Root settings for consistent styling */
+        body {
+            font-family: 'Crimson Text', serif; /* Set default to Crimson Text */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-attachment: fixed;
+            height: auto; /* Allow the height to expand */
+            overflow-y: scroll; /* Ensure vertical scrolling */
+        }
+
+        /* Background animation settings */
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Applying the animated gradient */
+        body::before {
+            content: "";
+            position: fixed; /* Changed to fixed to cover the viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Send the gradient to the back */
+            background: linear-gradient(120deg, 
+                #B1D36F, /* light green */
+                #245F5A, /* deep teal */
+                #57784a, /* very light green */
+                #3D8B78, /* teal green */
+                #8DB97B  /* muted green */
+            );
+            background-size: 400% 400%; /* Large size for smoother animation */
+            animation: gradient-animation 8s ease-in-out infinite; /* Speed up and loop */
+        }
+
+
+
+
+
+        /* Styling for the articles section */
+        .articles-section {
+            padding: 60px 30px;
+            background: linear-gradient(135deg, #dff1e1 0%, #f9f9f9 100%);
+            border-radius: 20px;
+            max-width: 1400px;
+            margin: 50px auto;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #c5e1a5;
+        }
+
+        .articles-section h2 {
+            font-family: 'Cinzel', serif; /* Cinzel for titles and headings */
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #1b5e20;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .articles-section p {
+            font-family: 'Crimson Text', serif; /* Subtext using Crimson Text */
+            font-size: 1.4em;
+            margin-bottom: 40px;
+            color: #444;
+        }
+        
+        .articles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .article-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+            border-left: 4px solid #8BC34A;
+        }
+
+        .article-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.05);
+            transition: opacity 0.4s ease;
+            opacity: 0;
+        }
+
+        .article-card:hover::before {
+            opacity: 1;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+            border-left: 4px solid #66BB6A;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .article-card:hover .article-image {
+            transform: scale(1.08);
+        }
+
+        .article-title {
+            font-family: 'Cinzel', serif; /* Cinzel for article titles */
+            font-size: 1.7em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .article-title a {
+            text-decoration: none;
+            color: #2E7D32;
+            transition: color 0.3s ease;
+        }
+
+        .article-title a:hover {
+            color: #1B5E20;
+        }
+
+        .article-snippet {
+            font-family: 'Crimson Text', serif; /* Subtext using Crimson Text */
+            font-size: 1em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            background-color: #2E7D32;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Cinzel', serif; /* Cinzel for buttons */
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background-color: #1B5E20;
+            transform: translateY(-4px);
+        }
+
+        /* Enhancing hover interactivity with futuristic shine effect */
+        .article-card:hover {
+            background: linear-gradient(145deg, #e8f5e9, #fff);
+        }
+
+        /* Responsive design for mobile */
+        @media screen and (max-width: 768px) {
+            .articles-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .article-card {
+                padding: 20px;
+            }
+
+            .article-title {
+                font-size: 1.4em;
+            }
+        }
+
+        /* Styling for articles list page */
+        .articles-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .articles-list li {
+            margin: 20px 0;
+        }
+
+        .articles-list a {
+            text-decoration: none;
+            color: #2E7D32;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .articles-list a:hover {
+            color: #66BB6A;
+        }
+
+        .back-home-btn {
+            background: #388E3C;
+            color: #fff;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<!-- Browse Articles Section -->
+<section id="articles-section" class="articles-section">
+    <h2>Browse Articles</h2>
+    <p class="articles-description">Dive into a curated selection of insightful articles!</p>
+
+    <a href="{{ url_for('index') }}" class="back-home-btn">
+        Back to Home
+    </a>
+
+    <!-- Articles Grid Container -->
+    <div class="articles-container">
+
+        <!-- Article 1 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702116302383" target="_blank">
+                    Seeing the Unseen: Uncover the Bulk Heterogeneous Deformation Processes
+                </a>
+            </h3>
+            <p class="article-snippet">Uncover the processes in metallic glasses through surface temperature decoding.</p>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702116302164" target="_blank">
+                    Host–Guest Recognition on Photo-Responsive Cell Surfaces
+                </a>
+            </h3>
+            <p class="article-snippet">Exploring how photo-responsive cell surfaces direct cell–cell contacts.</p>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702116303546" target="_blank">
+                    Characterization of Mechanically Competent Mineralized Tissue
+                </a>
+            </h3>
+            <p class="article-snippet">Study the distribution of mineralized tissue in micropores of bone substitutes.</p>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702117306089" target="_blank">
+                    Metallic Glass Nanotube Arrays: Preparation and Characterizations
+                </a>
+            </h3>
+            <p class="article-snippet">Preparation and characterization of metallic glass nanotube arrays.</p>
+        </div>
+
+        <!-- Article 5 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702117307836" target="_blank">
+                    Application of Graphene-Based Flexible Antennas
+                </a>
+            </h3>
+            <p class="article-snippet">The use of graphene-based flexible antennas in consumer electronics.</p>
+        </div>
+
+        <!-- Article 6 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702117304844" target="_blank">
+                    Full-Thickness Human Skin-On-Chip Technology
+                </a>
+            </h3>
+            <p class="article-snippet">Enhanced epidermal morphogenesis and barrier function with skin-on-chip tech.</p>
+        </div>
+
+        <!-- Article 7 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702117308052" target="_blank">
+                    Microfluidic Generation for Intracellular Delivery
+                </a>
+            </h3>
+            <p class="article-snippet">Utilizing microfluidic generation for transient cell volume exchange.</p>
+        </div>
+
+        <!-- Article 8 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S13697021183014" target="_blank">
+                    Temperature-Responsive Thin Film Starves Bacteria
+                </a>
+            </h3>
+            <p class="article-snippet">Exploring how tungsten-doped thin films inhibit bacterial growth.</p>
+        </div>
+
+        <!-- Article 1 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702118309477" target="_blank">
+                    Compositionally and Structurally Redesigned High-Energy Ni-Rich Layered Cathode for Next-Generation Lithium Batteries
+                </a>
+            </h3>
+            <p class="article-snippet">Innovative design for high-energy cathodes in lithium batteries.</p>
+        </div>
+    
+        <!-- Article 2 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702118311131" target="_blank">
+                    Advancing Knowledge of Electrochemically Generated Lithium Microstructure and Performance Decay of Lithium Ion Battery by Synchrotron X-ray Tomography
+                </a>
+            </h3>
+            <p class="article-snippet">Examining lithium microstructure using advanced tomography.</p>
+        </div>
+    
+        <!-- Article 3 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702119302196" target="_blank">
+                    Flash Infrared Annealing as a Cost-Effective and Low Environmental Impact Processing Method for Planar Perovskite Solar Cells
+                </a>
+            </h3>
+            <p class="article-snippet">Exploring cost-effective processing for solar cells through infrared annealing.</p>
+        </div>
+    
+        <!-- Article 4 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702119303451" target="_blank">
+                    Four-Dimensional Direct Laser Writing of Reconfigurable Compound Micromachines
+                </a>
+            </h3>
+            <p class="article-snippet">Reconfiguring micromachines using advanced laser writing techniques.</p>
+        </div>
+    
+        <!-- Article 5 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702119307394" target="_blank">
+                    Kirigami-Enabled Self-Folding Origami
+                </a>
+            </h3>
+            <p class="article-snippet">Innovative techniques to enable self-folding materials inspired by kirigami.</p>
+        </div>
+    
+        <!-- Article 6 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702119308661" target="_blank">
+                    Highly Efficient and Rapid Manufactured Perovskite Solar Cells Via Flash InfraRed Annealing
+                </a>
+            </h3>
+            <p class="article-snippet">Enhancing solar cell efficiency with flash infrared annealing techniques.</p>
+        </div>
+    
+        <!-- Article 7 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702119308727" target="_blank">
+                    Thermal Stress-Induced Charge and Structure Heterogeneity in Emerging Cathode Materials
+                </a>
+            </h3>
+            <p class="article-snippet">Studying how thermal stress impacts the structure of emerging cathode materials.</p>
+        </div>
+    
+        <!-- Article 8 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702119308697" target="_blank">
+                    Thermally Drawn Advanced Functional Fibers: New Frontier of Flexible Electronics
+                </a>
+            </h3>
+            <p class="article-snippet">The use of thermally drawn fibers in the development of flexible electronics.</p>
+        </div>
+        <!-- Article 1 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702120300158" target="_blank">
+                    Comparative Studies Of Optoelectrical Properties Of Prominent Pv Materials: Halide Perovskite, Cdte, And Gaas
+                </a>
+            </h3>
+            <p class="article-snippet">Analysis of optoelectrical properties in various photovoltaic materials.</p>
+        </div>
+    
+        <!-- Article 2 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702120300754" target="_blank">
+                    Activation And Stabilization Mechanisms Of Anionic Redox For Li Storage Applications
+                </a>
+            </h3>
+            <p class="article-snippet">Joint experimental and theoretical study on Li2Tio3–Limno2 binary system.</p>
+        </div>
+    
+        <!-- Article 3 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702120300766" target="_blank">
+                    Porous Nanocellulose Gels And Foams: Development Of Scaffolds For Tissue Engineering
+                </a>
+            </h3>
+            <p class="article-snippet">Breakthrough in creating nanocellulose-based scaffolds for tissue engineering.</p>
+        </div>
+    
+        <!-- Article 4 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702120301048" target="_blank">
+                    Sputter Coating Of Lithium Metal Electrodes With Lithiophilic Metals
+                </a>
+            </h3>
+            <p class="article-snippet">Enhancing lithium electrodes for homogeneous and reversible electrodissolution.</p>
+        </div>
+    
+        <!-- Article 5 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702120302236" target="_blank">
+                    Engineered Spider Silk-Based Materials To Prevent Microbial Infestation
+                </a>
+            </h3>
+            <p class="article-snippet">Spider silk-inspired materials designed to resist microbial growth.</p>
+        </div>
+    
+        <!-- Article 6 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702120303321" target="_blank">
+                    Multistage Work Hardening In Eutectic High-Entropy Alloys
+                </a>
+            </h3>
+            <p class="article-snippet">Study of multi-type twinning in ultrafine-grained high-entropy alloys.</p>
+        </div>
+    
+        <!-- Article 7 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702120304223" target="_blank">
+                    On The Origin Of Kinking In Layered Crystalline Solids
+                </a>
+            </h3>
+            <p class="article-snippet">Investigating the mechanisms behind kinking in layered crystalline materials.</p>
+        </div>
+    
+        <!-- Article 8 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S136970212030273X" target="_blank">
+                    Multi-Scale Textured Surfaces For Liquid Harnessing
+                </a>
+            </h3>
+            <p class="article-snippet">Design and applications of textured surfaces for unconventional liquid handling.</p>
+        </div>
+    
+        <!-- Article 9 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702120303606" target="_blank">
+                    Polymer Architecture For 3D-Printing Performance: Case Of Biodegradable Poly-Ε-Caprolactone
+                </a>
+            </h3>
+            <p class="article-snippet">Exploring polymer design to achieve high-resolution 3D-printing results.</p>
+        </div>
+        <!-- Article 1 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702122002085" target="_blank">
+                    Pedot:Pss-Modified Cotton Conductive Thread For Mass Manufacturing Of Textile-Based Electrical Wearable Sensors
+                </a>
+            </h3>
+            <p class="article-snippet">A new approach for mass manufacturing wearable electrical sensors with cotton-based conductive threads.</p>
+        </div>
+    
+        <!-- Article 2 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702122002334" target="_blank">
+                    Porous Liquids as Solvents for the Economical Separation of Carbon Dioxide from Methane
+                </a>
+            </h3>
+            <p class="article-snippet">Exploring porous liquids for efficient and economical separation of CO2 from methane gas.</p>
+        </div>
+    
+        <!-- Article 3 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702122002310" target="_blank">
+                    A Covalent Organic Framework Onion Structure
+                </a>
+            </h3>
+            <p class="article-snippet">Discovering the properties and potential applications of covalent organic framework onion structures.</p>
+        </div>
+    
+        <!-- Article 4 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702122002280" target="_blank">
+                    Internet-of-Nano-Things (IoNT) Driven Intelligent Face Masks to Combat Airborne Health Hazard
+                </a>
+            </h3>
+            <p class="article-snippet">Innovative IoNT-driven face masks designed to provide better protection against airborne hazards.</p>
+        </div>
+    
+        <!-- Article 5 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702122002875" target="_blank">
+                    Introducing C Phase in Additively Manufactured Ti-6Al-4V: A New Oxygen-Stabilized FCC Solid Solution
+                </a>
+            </h3>
+            <p class="article-snippet">Discovering a new solid solution phase in Ti-6Al-4V for enhanced properties in additive manufacturing.</p>
+        </div>
+    
+        <!-- Article 6 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702122002759" target="_blank">
+                    Washable, Stretchable, and Reusable Core–Shell Metal Nanowire Network-Based Electronics
+                </a>
+            </h3>
+            <p class="article-snippet">Breakthroughs in flexible, washable, and reusable nanowire network electronics for various applications.</p>
+        </div>
+    
+        <!-- Article 7 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702122002887" target="_blank">
+                    Multiplexed Biosensor for Point-Of-Care COVID-19 Monitoring
+                </a>
+            </h3>
+            <p class="article-snippet">Introducing a multiplexed biosensor for rapid COVID-19 detection and therapeutic management.</p>
+        </div>
+    
+        <!-- Article 8 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702123000214" target="_blank">
+                    3D Printing of Living Structural Biocomposites
+                </a>
+            </h3>
+            <p class="article-snippet">Exploring the world of 3D printed living biocomposites for advanced material applications.</p>
+        </div>
+    
+        <!-- Article 9 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702122003212" target="_blank">
+                    Electrodeposition-enabled, Electrically-Transduced Sensors and Biosensors
+                </a>
+            </h3>
+            <p class="article-snippet">New developments in electrodeposition techniques for advanced sensor and biosensor technology.</p>
+        </div>
+    
+        <!-- Article 10 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702122003091" target="_blank">
+                    Plasmonic Nanomaterials: A Versatile Phototheranostic Platform of Cancers
+                </a>
+            </h3>
+            <p class="article-snippet">Advancements in plasmonic nanomaterials for cancer diagnosis and phototheranostic treatment.</p>
+        </div>
+    
+        <!-- Article 11 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702123000688" target="_blank">
+                    Hydrogel-Enabled, Local Administration and Combinatorial Delivery of Immunotherapies for Cancer Treatment
+                </a>
+            </h3>
+            <p class="article-snippet">Exploring the use of hydrogels for efficient and targeted delivery of cancer immunotherapies.</p>
+        </div>
+    
+        <!-- Article 12 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702123002997" target="_blank">
+                    Electroactive Biomaterials Synergizing with Electrostimulation for Cardiac Tissue Regeneration
+                </a>
+            </h3>
+            <p class="article-snippet">Research on electroactive biomaterials and their applications in cardiac tissue regeneration.</p>
+        </div>
+    
+        <!-- Article 13 -->
+        <div class="article-card">
+            <h3 class="article-title">
+                <a href="https://www.sciencedirect.com/science/article/pii/S1369702123003504" target="_blank">
+                    Bioinspired, Heredity-Derived Hierarchical Bulk Multifunctional Copper Alloys
+                </a>
+            </h3>
+            <p class="article-snippet">Examining bioinspired copper alloys for advanced multifunctional material applications.</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

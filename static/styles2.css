@@ -2,7 +2,6 @@
    BIOPHILIC FUTURISM - GENERAL STYLES
 ====================================================== *//* Adjusted Gradient Animation for Body Background */
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -11,6 +10,48 @@ body {
     animation: gradient-move 8s ease infinite; /* Speed up animation */
     color: #222; /* Main text color for strong contrast */
     font-size: 18px;
+}
+
+/* Apply smooth scrolling to the entire document */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* General Body Font */
+body {
+    font-family: 'Crimson Text', serif;
+}
+
+/* Headings and Titles - Cinzel */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600; /* Ensure bold appearance */
+}
+
+/* Subheadings and Body Text - Crimson Text */
+p, a, li, .article-snippet, .article-title, .criteria-description, .guidelines-list li, .highlight-text, .step p, .btn-register, .btn-learn-more {
+    font-family: 'Crimson Text', serif;
+}
+
+/* Applying the animated gradient */
+body::before {
+    content: "";
+    position: fixed; /* Changed to fixed to cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the gradient to the back */
+    background: linear-gradient(120deg, 
+        #B1D36F, /* light green */
+        #245F5A, /* deep teal */
+        #57784a, /* very light green */
+        #3D8B78, /* teal green */
+        #8DB97B  /* muted green */
+    );
+    background-size: 400% 400%; /* Large size for smoother animation */
+    animation: gradient-animation 8s ease-in-out infinite; /* Speed up and loop */
 }
 
 /* Updated Keyframes for Gradient Movement */
@@ -26,6 +67,18 @@ body {
     }
     75% {
         background-position: 50% 25%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
         background-position: 0% 50%;
@@ -67,10 +120,6 @@ nav {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.nav-links li a:hover {
-    color: #AED581; /* Lighter green on hover */
-    transform: scale(1.1);
-}
 
 /* Burger Menu for Responsive Design */
 .burger {
@@ -137,17 +186,26 @@ nav {
    BIOPHILIC FUTURISM - HERO SECTION
 ====================================================== */
 .hero {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
     overflow: hidden;
-    max-width: 950;
-    padding: 0 20px; /* Ensure content is centered */
+    width: 100%;
     margin-bottom: 80px; /* Add space below hero section */
     margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
 }
 
 /* Hero Content Styling */
@@ -162,7 +220,6 @@ nav {
 
 /* Heading & Subtext Font Styles */
 .hero-content h1 {
-    font-family: 'Playfair Display', serif; /* Elegant font for heading */
     font-size: 4em; /* Large heading */
     color: #2E7D32; /* Deep green */
     line-height: 1.2; /* Balanced line height */
@@ -173,7 +230,6 @@ nav {
 }
 
 .hero-content h2 {
-    font-family: 'Roboto', sans-serif; /* Clean font for subtext */
     font-size: 1.8em; /* Medium size for subtitle */
     margin: 20px 0;
     font-weight: 300; /* Light weight for a modern feel */
@@ -184,7 +240,6 @@ nav {
 
 /* Event Details Styling */
 .event-details p {
-    font-family: 'Poppins', sans-serif; /* Consistent font for text */
     font-size: 1.2em;
     color: #555; /* Softer gray for better readability */
     margin: 10px 0;
@@ -209,8 +264,9 @@ nav {
 }
 
 .btn-register:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(56, 142, 60, 0.6);
+    transform: translateY(-5px) scale(1.05); /* Slight lift and grow */
+    box-shadow: 0 15px 25px rgba(56, 142, 60, 0.3);
+    background: linear-gradient(135deg, #66BB6A, #81C784); /* Animated color change */
 }
 
 
@@ -220,7 +276,6 @@ nav {
 
 /* Main Hero Heading */
 .hero-content h1 {
-    font-family: 'Playfair Display', serif;
     font-size: 4.5em; /* Large and impactful */
     color: #2E7D32; /* Deep green */
     margin: 0;
@@ -256,7 +311,6 @@ nav {
 
 /* Subheading Styling */
 .hero-content .hero-subtitle {
-    font-family: 'Roboto', sans-serif;
     font-size: 2em; /* Slightly larger for better focus */
     margin: 20px 0;
     font-weight: 300;
@@ -267,7 +321,6 @@ nav {
 
 /* Hero Subtext */
 .hero-subtext {
-    font-family: 'Poppins', sans-serif;
     font-size: 1.2em;
     color: #444;
     margin-bottom: 30px;
@@ -280,7 +333,7 @@ nav {
 .hero-buttons button {
     background: linear-gradient(135deg, #388E3C, #66BB6A);
     color: #fff;
-    padding: 15px 30px;
+    padding: 12px 30px;
     font-size: 1.2em;
     font-weight: bold;
     border-radius: 30px;
@@ -566,7 +619,6 @@ nav {
 
 /* Heading for the About Section */
 .about-container h2 {
-    font-family: 'Roboto', sans-serif;
     font-size: 3em;
     color: #2E7D32;
     margin-bottom: 40px;
@@ -595,21 +647,18 @@ nav {
 }
 
 .about-message h3 {
-    font-family: 'Playfair Display', serif;
     font-size: 2.2em;
     color: #388E3C;
     margin-bottom: 15px;
 }
 
 .about-message h4 {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
     color: #66BB6A;
     margin-bottom: 10px;
 }
 
 .about-message p {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     line-height: 1.6;
     color: #333;
@@ -647,7 +696,6 @@ nav {
 }
 
 .highlight-text {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     line-height: 1.6;
     color: #333;
@@ -700,7 +748,6 @@ nav {
 
 /* Heading for the Registration Section */
 .registration-container h2 {
-    font-family: 'Roboto', sans-serif;
     font-size: 3em;
     color: #2E7D32;
     margin-bottom: 40px;
@@ -729,7 +776,7 @@ nav {
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 300px;
-    flex: 1;
+    flex: auto;
     min-height: 250px;
 }
 
@@ -737,28 +784,33 @@ nav {
 .step-header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to the left */
     margin-bottom: 20px;
+    gap: 15px; /* Space between number and title */
 }
 
+
 /* Step Number Circle */
+
 .step-number {
     background: #66BB6A;
     color: #fff;
     font-size: 1.5em;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    border-radius: 50%; /* Ensure a perfect circle */
+    width: 50px; /* Set a consistent width */
+    height: 50px; /* Set a consistent height */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin-right: 15px; /* Space from the step title */
+    line-height: 1; /* Ensures text is centered vertically */
 }
+
+
 
 /* Step Title */
 .step h3 {
-    font-family: 'Playfair Display', serif;
     font-size: 1.8em;
     margin: 0;
     color: #2E7D32;
@@ -766,7 +818,6 @@ nav {
 
 /* Step Content */
 .step p, .step ul {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     line-height: 1.6;
     color: #333;
@@ -827,6 +878,59 @@ nav {
     padding: 40px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     display: grid;
+    grid-template-columns: repeat(auto-fitm minmax(300px, 1fr));
+    grid-gap: 30px; /* Gap between sections */
+}
+.section-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section-box:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.section-box h2 {
+    font-family: 'Cinzel', serif;
+    color: #2E7D32;
+    margin-bottom: 20px;
+}
+
+.section-box p {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Buttons inside combined section */
+.combined-section .btn-action {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #66BB6A;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.combined-section .btn-action:hover {
+    background-color: #388E3C;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(56, 142, 60, 0.3);
+}
+
+.elimination-container{
+    max-width: 1550px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fitm minmax(300px, 1fr));
     grid-gap: 30px; /* Gap between sections */
 }
 
@@ -844,7 +948,6 @@ nav {
 .guidelines-container h2,
 .elimination-container h2,
 .final-round-container h2 {
-    font-family: 'Roboto', sans-serif;
     font-size: 2.5em;
     color: #2E7D32; /* Deep green for headings */
     margin-bottom: 20px;
@@ -904,7 +1007,6 @@ nav {
 
 /* Section Headers */
 .section-header h2 {
-    font-family: 'Playfair Display', serif;
     font-size: 2.5em;
     color: #2E7D32;
     text-align: center;
@@ -917,7 +1019,6 @@ nav {
 
 /* Section Description */
 .section-description {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     margin-bottom: 20px;
     color: #333;
@@ -928,7 +1029,6 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 .guidelines-list li {
@@ -969,6 +1069,257 @@ nav {
     }
 }
 
+.guidelines-section {
+    padding: 60px 30px;
+    background-color: #f4f9f4;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.guidelines-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.4em;
+    color: #2E7D32;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.guidelines-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Crimson Text', serif;
+}
+
+.guideline-item {
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 5px solid #8BC34A;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-left 0.3s;
+}
+
+.guideline-item:hover {
+    background-color: #f0f5f0;
+    border-left: 5px solid #66BB6A;
+}
+
+.guideline-item h3 {
+    font-size: 1.6em;
+    color: #1B5E20;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.guideline-item p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+}
+
+.guideline-icon {
+    float: left;
+    margin-right: 15px;
+    font-size: 2em;
+    color: #4CAF50;
+    transition: color 0.3s;
+}
+
+.guideline-item:hover .guideline-icon {
+    color: #388E3C;
+}
+
+.elimination-round-section {
+    padding: 60px 30px;
+    background-color: #eef5ee;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.elimination-round-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.6em;
+    color: #1B5E20;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.elimination-round-description {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.4em;
+    color: #444;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.elimination-round-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.round-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+    position: relative;
+    border-left: 5px solid #66BB6A;
+}
+
+.round-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.round-item:hover::before {
+    opacity: 1;
+}
+
+.round-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #388E3C;
+}
+
+.round-item h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    color: #2E7D32;
+    margin-bottom: 15px;
+}
+
+.round-item p {
+    font-size: 1.2em;
+    font-family: 'Crimson Text', serif;
+    line-height: 1.8;
+    color: #555;
+}
+
+.round-item .round-icon {
+    font-size: 3em;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.final-round-section {
+    padding: 60px 30px;
+    background-color: #e9f5e9;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.final-round-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8em;
+    color: #1B5E20;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.final-round-description {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.4em;
+    color: #444;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+.final-round-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.final-round-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+    position: relative;
+    border-left: 5px solid #81C784;
+}
+
+.final-round-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.final-round-item:hover::before {
+    opacity: 1;
+}
+
+.final-round-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #66BB6A;
+}
+
+.final-round-item h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    color: #2E7D32;
+    margin-bottom: 15px;
+}
+
+.final-round-item p {
+    font-size: 1.2em;
+    font-family: 'Crimson Text', serif;
+    line-height: 1.8;
+    color: #555;
+}
+
+.final-round-item .final-round-icon {
+    font-size: 3em;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    display: block;
+}
+
+
 
 
 /* ======================================================
@@ -1004,7 +1355,6 @@ nav {
 
 /* Heading for the Awards Section */
 .awards-container h2 {
-    font-family: 'Roboto', sans-serif;
     font-size: 3em;
     color: #2E7D32;
     margin-bottom: 40px;
@@ -1062,14 +1412,12 @@ nav {
 
 /* Award Title and Description */
 .award h3 {
-    font-family: 'Playfair Display', serif;
     font-size: 2em; /* Make titles larger */
     margin-bottom: 15px;
     color: #2E7D32;
 }
 
 .award p {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em; /* Slightly larger font size */
     line-height: 1.6;
     color: #333;
@@ -1170,7 +1518,6 @@ nav {
 ====================================================== */
 /* Heading for Articles Section */
 .articles-container h2 {
-    font-family: 'Playfair Display', serif;
     font-size: 2.8em;
     color: #2E7D32; /* Deep green */
     margin-bottom: 20px;
@@ -1181,7 +1528,6 @@ nav {
 
 /* Description for Section */
 .articles-description {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     color: #444;
     margin-bottom: 40px;
@@ -1232,7 +1578,6 @@ nav {
 
 /* Title & Description in Card */
 .article-card strong {
-    font-family: 'Playfair Display', serif;
     font-size: 1.6em;
     color: #2E7D32;
     display: block;
@@ -1240,7 +1585,6 @@ nav {
 }
 
 .article-card p {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     color: #555;
     margin: 0;
@@ -1286,6 +1630,112 @@ nav {
         padding: 15px;
     }
 }
+
+.browse-articles-section {
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #f9f9f9 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 60px auto;
+    max-width: 1200px;
+    text-align: center;
+    position: relative;
+}
+
+.browse-articles-section::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    border: 2px dashed #8BC34A;
+    border-radius: 25px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.browse-articles-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8em;
+    color: #1B5E20;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.browse-articles-description {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.5em;
+    color: #444;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    border-left: 4px solid #8BC34A;
+    padding-left: 20px;
+    position: relative;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for the View All Articles Button */
+.btn-view-all {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 50px;
+    background-color: #2E7D32;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-view-all:hover {
+    background-color: #1B5E20;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Adding a smooth hover effect on the entire section */
+.browse-articles-section:hover::after {
+    opacity: 1;
+    transform: scale(1.02);
+    transition: all 0.5s ease;
+}
+
+/* Responsive design for smaller devices */
+@media screen and (max-width: 768px) {
+    .browse-articles-section {
+        padding: 60px 20px;
+    }
+
+    .browse-articles-description {
+        font-size: 1.2em;
+        padding-left: 15px;
+    }
+
+    .btn-view-all {
+        padding: 12px 28px;
+        font-size: 1.1em;
+    }
+}
+
 
 
 /* ======================================================
@@ -1384,7 +1834,6 @@ nav {
 
 /* Section Heading */
 .criteria-container h2 {
-    font-family: 'Playfair Display', serif;
     font-size: 3em;
     color: #2E7D32;
     text-align: center;
@@ -1396,7 +1845,6 @@ nav {
 
 /* Section Description */
 .criteria-description {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     text-align: center;
     margin-bottom: 40px;
@@ -1415,7 +1863,6 @@ nav {
 .criteria-table th,
 .criteria-table td {
     padding: 20px;
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     text-align: left;
 }
@@ -1458,7 +1905,6 @@ nav {
 
 /* Criteria Notes Styling */
 .criteria-notes {
-    font-family: 'Roboto', sans-serif;
     font-size: 1em;
     text-align: center;
     margin-top: 20px;
@@ -1497,7 +1943,6 @@ nav {
 
 /* Heading Styling */
 .contact-container h2 {
-    font-family: 'Playfair Display', serif;
     font-size: 2.5em;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -1512,7 +1957,6 @@ nav {
 
 /* Contact Details Text */
 .contact-details p {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     margin: 10px 0;
 }
@@ -1555,7 +1999,6 @@ nav {
 }
 
 .footer-bottom p {
-    font-family: 'Roboto', sans-serif;
     font-size: 1em;
     margin: 0;
     color: #C8E6C9;
@@ -1582,7 +2025,6 @@ nav {
 
 /* General Body Styling */
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -1606,7 +2048,6 @@ body {
 
 /* Form Heading Styling */
 .form-container h2 {
-    font-family: 'Playfair Display', serif;
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #2E7D32; /* Deep green */
@@ -1754,14 +2195,38 @@ select:focus {
     to { text-shadow: 0 0 30px rgba(56, 142, 60, 0.8), 0 0 60px rgba(56, 142, 60, 0.6); }
 }
 
-/* Enhanced Typography */
-h2 {
-    text-transform: uppercase;
-    color: #388E3C;
-    transition: transform 0.3s ease, color 0.3s ease;
+.about-section, .registration-section, .hero-content-box, .award, .awards-section, .combined-section, .criteria-section, .articles-section {
+    border-top: 15px solid #8BC34A;
+    border-bottom: 15px solid #8BC34A;
+    margin-bottom: 100px;
 }
 
-h2:hover {
-    transform: scale(1.15);
-    color: #66BB6A;
+.cta-button {
+    background-color: #66BB6A;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
+
+.cta-button:hover {
+    background-color: #1B5E20;
+}
+
+.section {
+    margin: 60px 0;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+

@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCICOMM 2020</title>
+    <title>SCICOMM 204</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <div id="scroll-indicator"></div>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -23,7 +25,8 @@
             <li><a href="#registration-section">Registration</a></li>
             <li><a href="#awards-section">Awards</a></li>
             <li><a href="#combined-section">Guidelines</a></li>
-            <li><a href="#articles">Browse Articles</a></li>
+            <li><a href="#articles-section">Browse Articles</a></li>
+            <li><a href="#judging-criteria">Criteria for Judging</a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
@@ -34,7 +37,7 @@
         <div class="hero-content-box">
             <div class="hero-content">
                 <h1>
-                    <span>Welcome</span> to SciComm
+                    <span>SciComm A.Y 2024 - 2025</span> 
                 </h1>
                 <h2 class="hero-subtitle">Unleash Your Scientific Voice</h2>
                 <p class="hero-subtext">
@@ -42,7 +45,6 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="register" class="btn-register">Register Now</a>
-                    <button class="btn-learn-more">Learn More</button>
                 </div>
             </div>
         </div>
@@ -105,7 +107,7 @@
                 <div class="step step-one">
                     <div class="step-header">
                         <span class="step-number">1</span>
-                        <h3>Gather Your Team & School Representative</h3>
+                        <h3>Gather Your Team And School</h3>
                     </div>
                     <p>
                         Form your team and confirm a representative from your school who will assist in the registration process and act as the primary contact.
@@ -155,17 +157,17 @@
                 <!-- Second Place -->
                 <div class="award second-place">
                     <h3>Second Place</h3>
-                    <p>🥈 A prize of $5,000 and a silver trophy for the runner-up.</p>
+                    <p>🥈 A prize of ₱5,000 and a silver trophy for the runner-up.</p>
                 </div>
                 <!-- First Place (center, elevated) -->
                 <div class="award first-place">
                     <h3>First Place</h3>
-                    <p>🏆 A grand prize of $10,000 and a gold trophy to the best project.</p>
+                    <p>🏆 A grand prize of ₱10,000 and a gold trophy to the best project.</p>
                 </div>
                 <!-- Third Place -->
                 <div class="award third-place">
                     <h3>Third Place</h3>
-                    <p>🥉 A prize of $2,500 and a bronze trophy for the third-place winner.</p>
+                    <p>🥉 A prize of ₱2,500 and a bronze trophy for the third-place winner.</p>
                 </div>
             </div>
         </div>
@@ -181,95 +183,162 @@
                 <div class="section-header">
                     <h2>Guidelines</h2>
                 </div>
-                <p class="section-description">Here are the guidelines to follow throughout the event:</p>
-                <ul class="guidelines-list">
-                    <li><strong>Be respectful to others.</strong> Collaboration and courtesy are key.</li>
-                    <li><strong>Follow the submission requirements.</strong> Ensure your work meets all criteria.</li>
-                    <li><strong>Ensure your work is original.</strong> Creativity is encouraged, plagiarism is not.</li>
-                </ul>
-            </div>
+                <section class="guidelines-section">
+                    <div class="guidelines-list">
+                        <!-- Guideline 1 -->
+                        <div class="guideline-item">
+                            <div class="accordion-button">
+                                <h3><i class="guideline-icon">📜</i> Follow the Submission Rules</h3>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Ensure that all submissions follow the outlined format. Upload the necessary documents, including all team member details, project title, and the coach’s approval.</p>
+                            </div>
+                        </div>
+                
+                        <!-- Guideline 2 -->
+                        <div class="guideline-item">
+                            <div class="accordion-button">
+                                <h3><i class="guideline-icon">⚖️</i> Abide by Ethical Standards</h3>
+                            </div>
+                            <div class="accordion-content">
+                                <p>All projects should adhere to the highest ethical standards, ensuring that no copyrighted or restricted content is used without appropriate permission.</p>
+                            </div>
+                        </div>
+                
+                        <!-- Guideline 3 -->
+                        <div class="guideline-item">
+                            <div class="accordion-button">
+                                <h3><i class="guideline-icon">📅</i> Meet the Deadline</h3>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Submissions after the deadline will not be accepted. Please ensure that all project materials are uploaded before the cutoff date.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
 
-            <!-- Elimination Round Section -->
-            <div class="elimination-container section-block">
-                <div class="section-header">
+                <section class="elimination-round-section">
                     <h2>Elimination Round</h2>
-                </div>
-                <p class="section-description">The elimination round will consist of:</p>
-                <ul class="guidelines-list">
-                    <li><strong>Initial submission review.</strong> Your entries will be assessed for content quality.</li>
-                    <li><strong>Judging based on creativity.</strong> The creativity and uniqueness of your work will be evaluated.</li>
-                    <li><strong>Announcement of finalists.</strong> The best entries will proceed to the final round.</li>
-                </ul>
-            </div>
-
+                    <p class="elimination-round-description">
+                        The elimination round will determine which teams advance to the finals. Prepare your best ideas and deliver your project with precision, creativity, and innovation.
+                    </p>
+                
+                    <div class="elimination-round-details">
+                        <!-- Round 1 -->
+                        <div class="round-item">
+                            <span class="round-icon">⚔️</span>
+                            <h3>Initial Screening</h3>
+                            <p>Teams will be judged on their project submissions. The top submissions will proceed to the next phase based on originality, impact, and execution.</p>
+                        </div>
+                
+                        <!-- Round 2 -->
+                        <div class="round-item">
+                            <span class="round-icon">🎯</span>
+                            <h3>Project Presentation</h3>
+                            <p>Teams advancing from the initial screening will present their projects to a panel of experts. This phase will focus on the clarity of presentation, feasibility, and future potential.</p>
+                        </div>
+                
+                        <!-- Round 3 -->
+                        <div class="round-item">
+                            <span class="round-icon">🏆</span>
+                            <h3>Final Evaluation</h3>
+                            <p>Only a few teams will make it to this round. The final evaluation will focus on project impact, scalability, and sustainability, determining the finalists.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                
             <!-- Final Round Section -->
-            <div class="final-round-container section-block">
-                <div class="section-header">
-                    <h2>Final Round</h2>
+            <section class="final-round-section">
+                <h2>Final Round</h2>
+                <p class="final-round-description">
+                    The final round is where the top teams battle it out for the ultimate victory. The best of the best will showcase their projects in front of a distinguished panel of judges.
+                </p>
+            
+                <div class="final-round-details">
+                    <!-- Stage 1 -->
+                    <div class="final-round-item">
+                        <span class="final-round-icon">💡</span>
+                        <h3>Concept Refinement</h3>
+                        <p>The teams will receive feedback and have the chance to refine their projects before presenting their final versions. Creativity and precision are key here.</p>
+                    </div>
+            
+                    <!-- Stage 2 -->
+                    <div class="final-round-item">
+                        <span class="final-round-icon">🎤</span>
+                        <h3>Final Pitch</h3>
+                        <p>Each team will present their refined projects to the judges. The focus will be on innovation, clarity, and the ability to impact the real world.</p>
+                    </div>
+            
+                    <!-- Stage 3 -->
+                    <div class="final-round-item">
+                        <span class="final-round-icon">🏅</span>
+                        <h3>Announcement of Winners</h3>
+                        <p>The best teams will be awarded based on their project’s overall impact, feasibility, and scalability. The final rankings will determine the ultimate champions.</p>
+                    </div>
                 </div>
-                <p class="section-description">The final round will be held on:</p>
-                <ul class="guidelines-list">
-                    <li><strong>Live presentation to judges.</strong> Share your work and defend your ideas.</li>
-                    <li><strong>Q&A session with the panel.</strong> Engage in a thoughtful discussion about your project.</li>
-                    <li><strong>Award ceremony and feedback.</strong> Winners are announced, and constructive feedback is provided.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+            </section>
+        </section>
+                
+                
+        
+            
 
-    
+
+
+                
             <!-- Judging Criteria Section -->
             <section id="judging-criteria" class="criteria-section">
-                 <div class="criteria-container">
-                     <h2>Criteria for Judging</h2>
-                 <div class="criteria-description">
-                     Each project will be evaluated on the following criteria to ensure a fair and balanced assessment.
-                 </div>
-        
-             <!-- Criteria Table with Card Style -->
-             <div class="table-responsive">
-                <table class="criteria-table">
-                    <thead>
-                        <tr>
-                            <th>Criteria</th>
-                            <th>Description</th>
-                            <th>Weight</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Innovation</td>
-                            <td>The originality and creativity of the solution presented.</td>
-                            <td>25%</td>
-                        </tr>
-                        <tr>
-                            <td>Feasibility</td>
-                            <td>How realistic and practical the implementation is.</td>
-                            <td>20%</td>
-                        </tr>
-                        <tr>
-                            <td>Impact</td>
-                            <td>The potential positive effect on the environment and society.</td>
-                            <td>25%</td>
-                        </tr>
-                        <tr>
-                            <td>Design & Usability</td>
-                            <td>The aesthetics, ease of use, and user experience of the solution.</td>
-                            <td>15%</td>
-                        </tr>
-                        <tr>
-                            <td>Presentation</td>
-                            <td>The clarity, structure, and delivery of the presentation.</td>
-                            <td>15%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <div class="criteria-container">
+                    <h2>Criteria for Judging</h2>
+                <div class="criteria-description">
+                    Each project will be evaluated on the following criteria to ensure a fair and balanced assessment.
+                </div>
+       
+            <!-- Criteria Table with Card Style -->
+            <div class="table-responsive">
+               <table class="criteria-table">
+                   <thead>
+                       <tr>
+                           <th>Criteria</th>
+                           <th>Description</th>
+                           <th>Weight</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>Innovation</td>
+                           <td>The originality and creativity of the solution presented.</td>
+                           <td>25%</td>
+                       </tr>
+                       <tr>
+                           <td>Feasibility</td>
+                           <td>How realistic and practical the implementation is.</td>
+                           <td>20%</td>
+                       </tr>
+                       <tr>
+                           <td>Impact</td>
+                           <td>The potential positive effect on the environment and society.</td>
+                           <td>25%</td>
+                       </tr>
+                       <tr>
+                           <td>Design & Usability</td>
+                           <td>The aesthetics, ease of use, and user experience of the solution.</td>
+                           <td>15%</td>
+                       </tr>
+                       <tr>
+                           <td>Presentation</td>
+                           <td>The clarity, structure, and delivery of the presentation.</td>
+                           <td>15%</td>
+                       </tr>
+                   </tbody>
+               </table>
+           </div>
 
-            <p class="criteria-notes">Note: The percentages represent the weight each criterion holds in the overall evaluation process.</p>
-        </div>
-    </section>
-
+           <p class="criteria-notes">Note: The percentages represent the weight each criterion holds in the overall evaluation process.</p>
+       </div>
+   </section>
 
     <!-- Browse Articles Section -->
     <section id="articles-section" class="articles-section">
@@ -277,72 +346,13 @@
             <h2>Browse Articles</h2>
             <p class="articles-description">Dive into a curated selection of insightful articles!</p>
             
-            <!-- Scrollable Articles Container -->
-            <div class="scrollable-articles">
-                <ul class="articles-list">
-                    <!-- Article Item -->
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702116302383" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702116302383" target="_blank">Seeing the Unseen: Uncover the Bulk Heterogeneous Deformation Processes in Metallic Glasses Through Surface Temperature Decoding</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702116302164" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702116302164" target="_blank">Host–Guest Recognition on Photo-Responsive Cell Surfaces Directs Cell–Cell Contacts</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702116303546" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702116303546" target="_blank">Characterization and Distribution of Mechanically Competent Mineralized Tissue in Micropores of β-tricalcium Phosphate Bone Substitutes</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702117306089" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702117306089" target="_blank">Metallic Glass Nanotube Arrays: Preparation and Surface Characterizations</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702117307836" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702117307836" target="_blank">Application of Graphene-Based Flexible Antennas in Consumer Electronic Devices</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702117304844" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702117304844" target="_blank">Full-Thickness Human Skin-On-Chip With Enhanced Epidermal Morphogenesis and Barrier Function</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702117308052" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702117308052" target="_blank">Microfluidic Generation of Transient Cell Volume Exchange for Convectively Driven Intracellular Delivery of Large Macromolecules</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S13697021183014" data-preview="https://www.sciencedirect.com/science/article/pii/S13697021183014" target="_blank">Temperature-Responsive Tungsten Doped Vanadium Dioxide Thin Film Starves Bacteria to Death</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702118309477" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702118309477" target="_blank">Compositionally and Structurally Redesigned High-Energy Ni-Rich Layered Cathode for Next-Generation Lithium Batteries</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702118311131" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702118311131" target="_blank">Advancing Knowledge of Electrochemically Generated Lithium Microstructure and Performance Decay of Lithium Ion Battery by Synchrotron X-ray Tomography</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702119302196" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119302196" target="_blank">Flash Infrared Annealing as a Cost-Effective and Low Environmental Impact Processing Method for Planar Perovskite Solar Cells</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702119303451" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119303451" target="_blank">Four-Dimensional Direct Laser Writing of Reconfigurable Compound Micromachines</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702119307394" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119307394" target="_blank">Kirigami-Enabled Self-Folding Origami</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702119308661" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119308661" target="_blank">Highly Efficient and Rapid Manufactured Perovskite Solar Cells Via Flash InfraRed Annealing</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702119308727" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119308727" target="_blank">Thermal Stress-Induced Charge and Structure Heterogeneity in Emerging Cathode Materials</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702119308697" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702119308697" target="_blank">Thermally Drawn Advanced Functional Fibers: New Frontier of Flexible Electronics</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702120300158" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120300158" target="_blank">Comparative Studies Of Optoelectrical Properties Of Prominent Pv Materials: Halide Perovskite, Cdte, And Gaas</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702120300754" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120300754" target="_blank">Activation And Stabilization Mechanisms Of Anionic Redox For Li Storage Applications: Joint Experimental And Theoretical Study On Li2Tio3–Limno2 Binary System</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702120300766" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120300766" target="_blank">Porous Nanocellulose Gels And Foams: Breakthrough Status In The Development Of Scaffolds For Tissue Engineering</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702120301048" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120301048" target="_blank">Sputter Coating Of Lithium Metal Electrodes With Lithiophilic Metals For Homogeneous And Reversible Lithium Electrodeposition And Electrodissolution</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702120302236" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120302236" target="_blank">Engineered Spider Silk-Based 2D And 3D Materials Prevent Microbial Infestation</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702120303321" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120303321" target="_blank">Multistage Work Hardening Assisted By Multi-Type Twinning In Ultrafine-Grained Heterostructural Eutectic High-Entropy Alloys</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702120304223" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120304223" target="_blank">On The Origin Of Kinking In Layered Crystalline Solids</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S136970212030273X" data-preview="https://www.sciencedirect.com/science/article/pii/S136970212030273X" target="_blank">Design Of Multi-Scale Textured Surfaces For Unconventional Liquid Harnessing</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702120303606" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120303606" target="_blank">Polymer Architecture As Key To Unprecedented High-Resolution 3D-Printing Performance: The Case Of Biodegradable Hexa-Functional Telechelic Urethane-Based Poly-Ε-Caprolactone</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702120304065" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120304065" target="_blank">3D-Printing Of A Complete Modular Ion Mobility Spectrometer</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702120304806" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702120304806" target="_blank">Distributed Sensor And Actuator Networks For Closed-Loop Bioelectronic Medicine</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121000663" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121000663" target="_blank">Al-Pha Beads: Bioplastic-Based Protease Biosensors For Global Health Applications</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S136970212100105X" data-preview="https://www.sciencedirect.com/science/article/pii/S136970212100105X" target="_blank">Stimuli-Responsive Transdermal Microneedle Patches</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121001024" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121001024" target="_blank">In-Situ Tem Investigation Of Toughening In Silicon At Small Scales</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121001425" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121001425" target="_blank">Hierarchical Build-Up Of Bio-Based Nanofibrous Materials With Tunable Metal–Organic Framework Biofunctionality</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121001644" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121001644" target="_blank">New Insights Into Sono-Exfoliation Mechanisms Of Graphite: In Situ High-Speed Imaging Studies And Acoustic Measurements</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121001619" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121001619" target="_blank">Exciton Versus Free Carrier Emission: Implications For Photoluminescence Efficiency And Amplified Spontaneous Emission Thresholds In Quasi-2D And 3D Perovskites</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121002546" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121002546" target="_blank">High-Yield Production Of A Super-Soluble Miniature Spidroin For Biomimetic High-Performance Materials</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121001772" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121001772" target="_blank">Highly Stretchable Self-Sensing Actuator Based On Conductive Photothermally-Responsive Hydrogel</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121002042" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121002042" target="_blank">Combinatorial Growth Of Multinary Nanostructured Thin Functional Films</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121003370" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121003370" target="_blank">Toward Multiscale Simulations Of Tailored Microstructure Formation In Metal Additive Manufacturing</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121003242" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121003242" target="_blank">Low Temperature Activation Of Inert Hexagonal Boron Nitride For Metal Deposition And Single Atom Catalysis</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121004521" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121004521" target="_blank">Intrinsically Disordered Peptides Enhance Regenerative Capacities Of Bone Composite Xenografts</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S136970212100362X" data-preview="https://www.sciencedirect.com/science/article/pii/S136970212100362X" target="_blank">Correlative Analysis Of Structure And Chemistry Of Lixfepo4 Platelets Using 4D-Stem And X-Ray Ptychography</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702121004545" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702121004545" target="_blank">Supramolecular Polymer Materials Bring Restorative Heart Valve Therapy To Patients</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122000451" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122000451" target="_blank">Physical, Mechanical, And Microstructural Characterization Of Novel, 3D-Printed, Tunable, Lab-Grown Plant Materials Generated From Zinnia Elegans Cell Cultures</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122000918" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122000918" target="_blank">Self-Assembly Enables Simple Structure Organic Photovoltaics Via Green-Solvent And Open-Air-Printing: Closing The Lab-To-Fab Gap</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122001821" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122001821" target="_blank">Parts-Per-Billion (Ppb) Selective Iodine Sensors Leveraging Metal–Organic Framework Nanoenvironment</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002085" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002085" target="_blank">Pedot:Pss-Modified Cotton Conductive Thread For Mass Manufacturing Of Textile-Based Electrical Wearable Sensors By Computerized Embroidery</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002334" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002334" target="_blank">Porous Liquids as Solvents for the Economical Separation of Carbon Dioxide from Methane</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002310" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002310" target="_blank">A Covalent Organic Framework Onion Structure</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002280" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002280" target="_blank">Internet-of-Nano-Things (IoNT) Driven Intelligent Face Masks to Combat Airborne Health Hazard</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002875" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002875" target="_blank">Introducing C Phase in Additively Manufactured Ti-6Al-4V: A New Oxygen-Stabilized Face-Centred Cubic Solid solution with Improved Mechanical Properties</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002759" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002759" target="_blank">Washable, Stretchable, and Reusable Core–Shell Metal Nanowire Network-Based Electronics on a Breathable Polymer Nanomesh Substrate</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122002887" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122002887" target="_blank">Multiplexed Biosensor for Point-Of-Care COVID-19 Monitoring: CRISPR-Powered Unamplified RNA Diagnostics and Protein-Based Therapeutic Drug Management</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702123000214" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702123000214" target="_blank">3D Printing of Living Structural Biocomposites</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122003212" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122003212" target="_blank">Electrodeposition-enabled, Electrically-Transduced Sensors and Biosensors</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702122003091" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702122003091" target="_blank">Plasmonic Nanomaterials: A Versatile Phototheranostic Platform of Cancers</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702123000688" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702123000688" target="_blank">Hydrogel-Enabled, Local Administration and Combinatorial Delivery of Immunotherapies for Cancer Treatment</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702123002997" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702123002997" target="_blank">Electroactive Biomaterials Synergizing with Electrostimulation for Cardiac Tissue Regeneration and Function-Monitoring</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S1369702123003504" data-preview="https://www.sciencedirect.com/science/article/pii/S1369702123003504" target="_blank">Bioinspired, Heredity-Derived Hierarchical Bulk Multifunctional Copper Alloys</a></li>
-                                   <!-- Add the rest of your articles here as needed -->
-                 </ul>
-            </div>  
+            <!-- Button to View All Articles -->
+            <div class="view-all-articles-button">
+                <a href="{{ url_for('view_articles') }}" class="btn-view-all">View List of All Articles</a>
+            </div>
         </div>
     </section>
+
 
         <!-- PDF Preview Modal -->
         <div id="pdf-preview-modal">

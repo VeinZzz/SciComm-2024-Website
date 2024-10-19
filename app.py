@@ -29,6 +29,12 @@ init_db()
 def index():
     return render_template('index.html')
 
+@app.route('/view_articles')
+def view_articles():
+    # Render the view_articles.html template
+    return render_template('view_articles.html')
+
+
 @app.route('/register', methods=['GET', 'POST'])
 def registration_form():
     if request.method == 'POST':

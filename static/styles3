@@ -143,4 +143,14 @@ document.querySelectorAll('.hero-buttons button').forEach(button => {
     });
 });
 
+---------==========================================================----------------------------------==========================================
+.nav-links li a:hover {
+    color: #AED581; /* Lighter green on hover */
+    transform: scale(1.1);
+}
 
+/* Hero hover effect */
+.hero-content:hover h1,
+.hero-content:hover h2 {
+    transform: scale(1.05); /* Slight zoom on hover */
+}

@@ -134,3 +134,34 @@ window.addEventListener('scroll', () => {
     // Fade background color for navbar based on scroll
     document.querySelector('nav').style.backgroundColor = `rgba(56, 142, 60, ${Math.min(scrollY / 500, 0.9)})`;
 });
+
+// JavaScript for the accordion functionality
+document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+
+        button.querySelector('span').textContent = content.classList.contains('active') ? '+' : '−';
+        content.classList.toggle('active');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link'); // Adjust class to your nav link class
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            // Prevent default anchor behavior
+            e.preventDefault();
+
+            // Get the target section
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            // Scroll smoothly to the target section
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    });
+});
