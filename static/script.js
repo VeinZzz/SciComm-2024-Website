@@ -165,3 +165,50 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+    // Hide all article details initially
+const articleDetails = document.querySelectorAll('.article-detail');
+const articlesContainer = document.querySelector('.articles-container');
+
+// Function to hide all article details and show the article list
+function showList() {
+    articleDetails.forEach(detail => {
+        detail.classList.remove('active');
+    });
+    articlesContainer.style.display = 'flex'; // Show the article list again
+}
+document.querySelectorAll('.article-card').forEach(card => {
+    // Ensure that clicking the card works only for the card and not for the anchor tag
+    card.addEventListener('click', (e) => {
+        // If the clicked element is an anchor (<a>), allow the default action (open link)
+        if (e.target.tagName.toLowerCase() === 'a') {
+            return; // Let the browser handle anchor clicks
+        }
+
+        // Custom behavior for the card click (if any)
+        const articleId = card.getAttribute('data-article');
+        // Handle showing article details or other actions here
+    });
+});
+
+// Make sure anchor links inside article cards open links
+document.querySelectorAll('.article-card a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent the card's click event from firing
+        window.open(this.href, '_blank'); // Ensure the link opens in a new tab
+    });
+});
+
+document.querySelectorAll('.article-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+        if (e.target.tagName.toLowerCase() === 'a') {
+            return; // Allow the "Read More" button to work normally
+        }
+        e.stopPropagation(); // Stop event propagation for other elements
+    });
+});
+
+
+
+
+    

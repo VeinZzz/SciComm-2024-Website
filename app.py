@@ -109,3 +109,54 @@ def view_registrations():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.route('/articles/<int:article_id>')
+def view_article(article_id):
+    articles = [
+        {"id": 1, "title": "Seeing the Unseen: Uncover the Bulk Heterogeneous Deformation Processes", "content": "Detailed content for article 1..."},
+        # Additional articles here
+    ]
+
+    article = next((article for article in articles if article['id'] == article_id), None)
+    if article:
+        return render_template('article.html', article=article)
+    else:
+        return "Article not found", 404
+
+@app.route('/view_articles')
+def view_articles():
+    # Simulating a database of articles
+    articles = {
+        1: {
+            "title": "Seeing the Unseen: Uncover the Bulk Heterogeneous Deformation Processes",
+            "content": "Detailed content for Article 1...",
+        },
+        2: {
+            "title": "Host–Guest Recognition on Photo-Responsive Cell Surfaces",
+            "content": "Detailed content for Article 2...",
+        },
+        # Add more articles here as needed
+    }
+
+    # Get the article_id from the query string (if provided)
+    article_id = request.args.get('article_id', None)
+
+    # If article_id is provided and exists, load the article content
+    if article_id and int(article_id) in articles:
+        article = articles[int(article_id)]
+        return render_template('view_articles.html', article=article)
+    else:
+        # Default behavior: Show the list of articles without details
+        return render_template('view_articles.html', article=None, articles=articles)
+    
+@app.route('/view_articles')
+def view_articles():
+    # Simulate a list of external article links (without titles)
+    article_links = [
+        'https://www.sciencedirect.com/science/article/pii/S1369702116302383',
+        'https://www.sciencedirect.com/science/article/pii/S1369702116302164',
+        'https://www.sciencedirect.com/science/article/pii/S1369702116303546',
+        'https://www.sciencedirect.com/science/article/pii/S1369702117306089',
+        'https://www.sciencedirect.com/science/article/pii/S1369702117307836'
+    ]
+    return render_template('view_articles.html', article_links=article_links)
