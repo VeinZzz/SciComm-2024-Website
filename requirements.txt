@@ -14,3 +14,5 @@ platformdirs==3.11.0
 setuptools==68.2.2
 virtualenv==20.24.6
 Werkzeug==3.0.4
+psycopg2
+
