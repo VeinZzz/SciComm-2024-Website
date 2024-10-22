@@ -81,7 +81,9 @@ def get_db_connection():
     )
     return connection
 
-    
+init_db()
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
