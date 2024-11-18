@@ -263,10 +263,16 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-register, .btn-learn-more:hover {
+.btn-register:hover {
     transform: translateY(-5px) scale(1.05); /* Slight lift and grow */
     box-shadow: 0 15px 25px rgba(56, 142, 60, 0.3);
     background: linear-gradient(135deg, #66BB6A, #81C784); /* Animated color change */
+}
+
+.btn-learn-more:hover{
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0pc 15px 25px rgba(56, 152, 60, 0.3);
+    background: linear-gradient(135deg, #66BB6A, #81C784);
 }
 
 
