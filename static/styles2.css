@@ -251,7 +251,7 @@ nav {
     transform: scale(1.05); /* Slight zoom on hover */
 }
 
-.btn-register {
+.btn-register, .btn-learn-more {
     display: inline-block;
     padding: 12px 30px;
     font-size: 1.2em;
@@ -263,7 +263,7 @@ nav {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-register:hover {
+.btn-register, .btn-learn-more:hover {
     transform: translateY(-5px) scale(1.05); /* Slight lift and grow */
     box-shadow: 0 15px 25px rgba(56, 142, 60, 0.3);
     background: linear-gradient(135deg, #66BB6A, #81C784); /* Animated color change */
