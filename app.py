@@ -73,11 +73,11 @@ def view_registrations():
 # PostgreSQL connection function
 def get_db_connection():
     connection = psycopg2.connect(
-        host="dpg-ct21i41opnds73fnml00-a",  # Your Hostname
+        host="dpg-ctu05kbv2p9s738nf4l0-a",  # Your Hostname
         port="5432",  # Default PostgreSQL port
-        database="scicomm2024_data_2",  # Your Database name
-        user="scicomm2024_data_2_user",  # Your Username
-        password="OCUSAG1M2aF9CIngoITB6NKFfLBnyJvS"  # Your Password from Render
+        database="scicomm2024_data_3",  # Your Database name
+        user="scicomm2024_data_3_user",  # Your Username
+        password="wISRudQHg1ZKkDdTs9Cu05GfxfVtXuV0"  # Your Password from Render
     )
     return connection
 
