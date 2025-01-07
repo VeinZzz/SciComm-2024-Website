@@ -92,7 +92,7 @@ body::before {
 nav {
     position: sticky;
     top: 0;
-    background-color: rgb(20, 54, 26);  
+    background-color: rgb(20, 36, 54);  
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -265,13 +265,13 @@ nav {
 
 .btn-register:hover {
     transform: translateY(-5px) scale(1.05); /* Slight lift and grow */
-    box-shadow: 0 15px 25px rgba(56, 142, 60, 0.3);
+    box-shadow: 0 15px 25px rgba(125, 142, 56, 0.3);
     background: linear-gradient(135deg, #6673bb, #8191c7); /* Animated color change */
 }
 
 .btn-learn-more:hover{
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0pc 15px 25px rgba(56, 152, 60, 0.3);
+    box-shadow: 0pc 15px 25px rgba(152, 152, 56, 0.3);
     background: linear-gradient(135deg, #6699bb, #81a5c7);
 }
 
@@ -676,7 +676,7 @@ nav {
     flex: 1;
     max-width: 450px;
     padding: 20px;
-    background: rgba(102, 187, 106, 0.15); /* Light green highlight */
+    background: rgba(102, 127, 187, 0.15); /* Light green highlight */
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -1811,7 +1811,7 @@ nav {
 }
 
 .criteria-table tbody tr:hover {
-    background-color: rgba(66, 110, 54, 0.1);
+    background-color: rgba(54, 87, 110, 0.1);
 }
 
 .criteria-table th, .criteria-table td {
@@ -1968,7 +1968,7 @@ nav {
 }
 
 .contact-details a {
-    color: #AED581; /* Light green */
+    color: #ffffff; /* Light green */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -1976,7 +1976,7 @@ nav {
 
 /* Hover Effect for Links */
 .contact-details a:hover {
-    color: #C8E6C9; /* Even lighter green on hover */
+    color: #b4c9d4; /* Even lighter green on hover */
 }
 
 /* Social Media Icons */
@@ -2007,7 +2007,7 @@ nav {
 .footer-bottom p {
     font-size: 1em;
     margin: 0;
-    color: #C8E6C9;
+    color: #ffffff;
 }
 
 /* Responsive Design */
@@ -2075,7 +2075,7 @@ body {
 /* Button Hover Effect */
 .back-home-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(56, 142, 60, 0.4);
+    box-shadow: 0 8px 20px rgba(56, 88, 142, 0.4);
     background: #668ebb; /* Lighter green */
 }
 
@@ -2087,7 +2087,7 @@ body {
 
 .form-group label {
     font-weight: 600;
-    color: #388E3C; /* Deep green for labels */
+    color: #384f8e; /* Deep green for labels */
 }
 
 /* Input Fields */
