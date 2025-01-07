@@ -522,7 +522,7 @@ nav {
 /* Button Hover Effect */
 .hero-buttons button:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 25px rgba(56, 142, 60, 0.3);
+    box-shadow: 0 15px 25px rgba(143, 132, 63, 0.3);
     background: linear-gradient(135deg, #6681bb, #818ec7); /* Animated gradient */
 }
 
