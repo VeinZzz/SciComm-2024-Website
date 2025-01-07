@@ -351,7 +351,7 @@ nav {
 /* Hero Button Hover Effect */
 .hero-buttons button:hover {
     transform: translateY(-5px) scale(1.05); /* Slight lift and grow */
-    box-shadow: 0 15px 25px rgba(56, 142, 60, 0.3);
+    box-shadow: 0 15px 25px rgba(136, 142, 56, 0.3);
     background: linear-gradient(135deg, #668ebb, #81a7c7); /* Animated color change */
 }
 
@@ -775,7 +775,7 @@ nav {
 
 /* Step Styles */
 .step {
-    background: rgba(102, 187, 106, 0.15); /* Light green highlight */
+    background: rgba(102, 167, 187, 0.15); /* Light green highlight */
     border-left: 10px solid #2e577d; /* Green border for emphasis */
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -843,7 +843,7 @@ nav {
 /* Interactive Hover Effect */
 .step:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(66, 110, 54, 0.2);
+    box-shadow: 0 15px 30px rgba(54, 102, 110, 0.2);
 }
 
 /* Responsive Design */
