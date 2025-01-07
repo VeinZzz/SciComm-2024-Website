@@ -1892,7 +1892,7 @@ nav {
 
 /* Hover Effect for Rows */
 .criteria-table tbody tr:hover {
-    background: rgba(102, 187, 106, 0.2); /* Subtle hover color */
+    background: rgba(102, 154, 187, 0.2); /* Subtle hover color */
     transform: translateY(-5px); /* Lift effect */
     box-shadow: 0 5px 15px rgba(66, 110, 54, 0.15); /* Slight shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
