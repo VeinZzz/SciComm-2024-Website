@@ -44,11 +44,11 @@ body::before {
     height: 100%;
     z-index: -1; /* Send the gradient to the back */
     background: linear-gradient(120deg, 
-        #B1D36F, /* light green */
-        #245F5A, /* deep teal */
-        #57784a, /* very light green */
-        #3D8B78, /* teal green */
-        #8DB97B  /* muted green */
+        #01c1fc, /* light green */
+        #243e5f, /* deep teal */
+        #4a6078, /* very light green */
+        #3d428b, /* teal green */
+        #7b96b9  /* muted green */
     );
     background-size: 400% 400%; /* Large size for smoother animation */
     animation: gradient-animation 8s ease-in-out infinite; /* Speed up and loop */
@@ -99,7 +99,7 @@ nav {
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     z-index: 10;
-    border-bottom: 2px solid #66BB6A;
+    border-bottom: 2px solid #6692bb;
 }
 
 /* Navigation Links */
@@ -142,7 +142,7 @@ nav {
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: rgba(56, 142, 60, 0.95);
+        background-color: rgba(56, 93, 142, 0.95);
         width: 200px;
         padding: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -161,7 +161,7 @@ nav {
 /* Enhanced burger icon animation */
 .burger.active div:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
-    background-color: #AED581;
+    background-color: #81c8d5;
 }
 
 .burger.active div:nth-child(2) {
@@ -170,7 +170,7 @@ nav {
 
 .burger.active div:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
-    background-color: #AED581;
+    background-color: #81c8d5;
 }
 
 /* Smooth transition for burger and nav menu */
@@ -221,7 +221,7 @@ nav {
 /* Heading & Subtext Font Styles */
 .hero-content h1 {
     font-size: 4em; /* Large heading */
-    color: #2E7D32; /* Deep green */
+    color: #2e407d; /* Deep green */
     line-height: 1.2; /* Balanced line height */
     margin: 0; /* Remove default margin */
     animation: fadeInDown 1.5s ease; /* Smooth fade-in */
@@ -233,7 +233,7 @@ nav {
     font-size: 1.8em; /* Medium size for subtitle */
     margin: 20px 0;
     font-weight: 300; /* Light weight for a modern feel */
-    color: #66BB6A; /* Soft green */
+    color: #66a0bb; /* Soft green */
     line-height: 1.4; /* Increase readability */
     transition: transform 0.3s ease-in-out;
 }
@@ -257,7 +257,7 @@ nav {
     font-size: 1.2em;
     font-weight: bold;
     text-decoration: none; /* Remove underline */
-    background: linear-gradient(135deg, #388E3C, #66BB6A);
+    background: linear-gradient(135deg, #38458e, #6675bb);
     color: #fff;
     border-radius: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -266,13 +266,13 @@ nav {
 .btn-register:hover {
     transform: translateY(-5px) scale(1.05); /* Slight lift and grow */
     box-shadow: 0 15px 25px rgba(56, 142, 60, 0.3);
-    background: linear-gradient(135deg, #66BB6A, #81C784); /* Animated color change */
+    background: linear-gradient(135deg, #6673bb, #8191c7); /* Animated color change */
 }
 
 .btn-learn-more:hover{
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0pc 15px 25px rgba(56, 152, 60, 0.3);
-    background: linear-gradient(135deg, #66BB6A, #81C784);
+    background: linear-gradient(135deg, #6699bb, #81a5c7);
 }
 
 
@@ -283,7 +283,7 @@ nav {
 /* Main Hero Heading */
 .hero-content h1 {
     font-size: 4.5em; /* Large and impactful */
-    color: #2E7D32; /* Deep green */
+    color: #2e367d; /* Deep green */
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -297,7 +297,7 @@ nav {
 .hero-content h1 .highlight {
     display: inline-block;
     position: relative;
-    color: #66BB6A;
+    color: #6681bb;
     animation: growText 1.8s ease forwards; /* Special effect for welcome word */
 }
 
@@ -309,7 +309,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #89dc62, #2E7D32);
+    background: linear-gradient(135deg, #6297dc, #2e3a7d);
     mix-blend-mode: overlay; /* Blends color for a futuristic glow */
     opacity: 0.3;
     z-index: -1;
@@ -320,8 +320,8 @@ nav {
     font-size: 2em; /* Slightly larger for better focus */
     margin: 20px 0;
     font-weight: 300;
-    color: #81C784;
-    text-shadow: 0 2px 5px rgba(56, 142, 60, 0.5); /* Light shadow for depth */
+    color: #8199c7;
+    text-shadow: 0 2px 5px rgba(56, 57, 142, 0.5); /* Light shadow for depth */
     animation: fadeInText 2s ease forwards;
 }
 
@@ -337,7 +337,7 @@ nav {
 
 /* Button Hover Enhancements */
 .hero-buttons button {
-    background: linear-gradient(135deg, #388E3C, #66BB6A);
+    background: linear-gradient(135deg, #38568e, #6684bb);
     color: #fff;
     padding: 12px 30px;
     font-size: 1.2em;
@@ -352,7 +352,7 @@ nav {
 .hero-buttons button:hover {
     transform: translateY(-5px) scale(1.05); /* Slight lift and grow */
     box-shadow: 0 15px 25px rgba(56, 142, 60, 0.3);
-    background: linear-gradient(135deg, #66BB6A, #81C784); /* Animated color change */
+    background: linear-gradient(135deg, #668ebb, #81a7c7); /* Animated color change */
 }
 
 /* Typography Animation Keyframes */
@@ -387,7 +387,7 @@ nav {
     margin: 15px auto;
     width: 100px;
     height: 5px;
-    background: linear-gradient(135deg, #388E3C, #66BB6A);
+    background: linear-gradient(135deg, #38648e, #6681bb);
     border-radius: 2px;
     animation: fadeInUnderline 2s ease forwards;
 }
@@ -428,7 +428,7 @@ nav {
     left: -5px;
     right: -5px;
     bottom: -5px;
-    background: linear-gradient(135deg, #66BB6A, #2E7D32, #A5D6A7);
+    background: linear-gradient(135deg, #6684bb, #2e3a7d, #a5b9d6);
     border-radius: 25px;
     z-index: -1;
     transition: transform 0.5s ease;
@@ -448,7 +448,7 @@ nav {
 
 /* Improved Hover Effects for Buttons */
 .hero-buttons button {
-    background: linear-gradient(135deg, #388E3C, #66BB6A);
+    background: linear-gradient(135deg, #385d8e, #6675bb);
     color: #fff;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -462,8 +462,8 @@ nav {
 /* Button Hover Effect */
 .hero-buttons button:hover {
     transform: translateY(-5px) scale(1.05); /* Slight lift and grow */
-    box-shadow: 0 10px 20px rgba(56, 142, 60, 0.6);
-    border: 3px solid #A5D6A7; /* Border glow on hover */
+    box-shadow: 0 10px 20px rgba(56, 86, 142, 0.6);
+    border: 3px solid #a5b9d6; /* Border glow on hover */
 }
 
 /* Decorative Effects for Hero Content */
@@ -476,7 +476,7 @@ nav {
 
 /* Enhanced Shadow for Hero Headings */
 .hero-content h1 {
-    text-shadow: 0 4px 8px rgba(56, 142, 60, 0.3); /* Deeper shadow */
+    text-shadow: 0 4px 8px rgba(56, 79, 142, 0.3); /* Deeper shadow */
 }
 
 /* Subtle Background Decoration (Optional) */
@@ -505,7 +505,7 @@ nav {
 
 /* General Button Styling */
 .hero-buttons button {
-    background: linear-gradient(135deg, #388E3C, #66BB6A);
+    background: linear-gradient(135deg, #385d8e, #6688bb);
     color: #fff;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -523,7 +523,7 @@ nav {
 .hero-buttons button:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 15px 25px rgba(56, 142, 60, 0.3);
-    background: linear-gradient(135deg, #66BB6A, #81C784); /* Animated gradient */
+    background: linear-gradient(135deg, #6681bb, #818ec7); /* Animated gradient */
 }
 
 /* Button Ripple Effect on Click */
@@ -549,7 +549,7 @@ nav {
 
 /* Enhanced Focus State for Accessibility */
 .hero-buttons button:focus-visible {
-    box-shadow: 0 0 10px rgba(56, 142, 60, 0.8);
+    box-shadow: 0 0 10px rgba(56, 62, 142, 0.8);
 }
 
 /* Glowing Effect on Hover */
@@ -563,7 +563,7 @@ nav {
     border-radius: 40px;
     background: rgba(255, 255, 255, 0.1);
     z-index: -1;
-    box-shadow: 0 0 20px rgba(56, 142, 60, 0.5); /* Greenish glow */
+    box-shadow: 0 0 20px rgba(56, 69, 142, 0.5); /* Greenish glow */
     transition: box-shadow 0.3s ease;
 }
 
@@ -584,7 +584,7 @@ nav {
 
 .hero-buttons button:hover::before {
     opacity: 1;
-    box-shadow: 0 0 20px rgba(56, 142, 60, 0.5); /* Glowing shadow on hover */
+    box-shadow: 0 0 20px rgba(56, 100, 142, 0.5); /* Glowing shadow on hover */
 }
 
 
@@ -626,12 +626,12 @@ nav {
 /* Heading for the About Section */
 .about-container h2 {
     font-size: 3em;
-    color: #2E7D32;
+    color: #2e4a7d;
     margin-bottom: 40px;
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
-    border-bottom: 3px solid #66BB6A;
+    border-bottom: 3px solid #668ebb;
     padding-bottom: 10px;
 }
 
@@ -654,13 +654,13 @@ nav {
 
 .about-message h3 {
     font-size: 2.2em;
-    color: #388E3C;
+    color: #38608e;
     margin-bottom: 15px;
 }
 
 .about-message h4 {
     font-size: 1.5em;
-    color: #66BB6A;
+    color: #6688bb;
     margin-bottom: 10px;
 }
 
@@ -698,7 +698,7 @@ nav {
 .highlight-icon {
     font-size: 2em;
     margin-right: 15px;
-    color: #66BB6A;
+    color: #668bbb;
 }
 
 .highlight-text {
@@ -755,12 +755,12 @@ nav {
 /* Heading for the Registration Section */
 .registration-container h2 {
     font-size: 3em;
-    color: #2E7D32;
+    color: #2e4a7d;
     margin-bottom: 40px;
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
-    border-bottom: 3px solid #66BB6A;
+    border-bottom: 3px solid #668ebb;
     padding-bottom: 10px;
 }
 
@@ -776,7 +776,7 @@ nav {
 /* Step Styles */
 .step {
     background: rgba(102, 187, 106, 0.15); /* Light green highlight */
-    border-left: 10px solid #2E7D32; /* Green border for emphasis */
+    border-left: 10px solid #2e577d; /* Green border for emphasis */
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -799,7 +799,7 @@ nav {
 /* Step Number Circle */
 
 .step-number {
-    background: #66BB6A;
+    background: #6692bb;
     color: #fff;
     font-size: 1.5em;
     border-radius: 50%; /* Ensure a perfect circle */
@@ -819,7 +819,7 @@ nav {
 .step h3 {
     font-size: 1.8em;
     margin: 0;
-    color: #2E7D32;
+    color: #2e4e7d;
 }
 
 /* Step Content */
@@ -900,7 +900,7 @@ nav {
 
 .section-box h2 {
     font-family: 'Cinzel', serif;
-    color: #2E7D32;
+    color: #2e407d;
     margin-bottom: 20px;
 }
 
@@ -915,7 +915,7 @@ nav {
 .combined-section .btn-action {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #66BB6A;
+    background-color: #6675bb;
     color: white;
     text-decoration: none;
     border-radius: 30px;
@@ -955,7 +955,7 @@ nav {
 .elimination-container h2,
 .final-round-container h2 {
     font-size: 2.5em;
-    color: #2E7D32; /* Deep green for headings */
+    color: #2e4e7d; /* Deep green for headings */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -997,7 +997,7 @@ nav {
 
 /* Section Blocks */
 .section-block {
-    background: rgba(235, 255, 235, 0.9); /* Light greenish background */
+    background: rgba(235, 248, 255, 0.9); /* Light greenish background */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -1014,12 +1014,12 @@ nav {
 /* Section Headers */
 .section-header h2 {
     font-size: 2.5em;
-    color: #2E7D32;
+    color: #2e537d;
     text-align: center;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 2px solid #66BB6A; /* Underline for headers */
+    border-bottom: 2px solid #668ebb; /* Underline for headers */
     display: inline-block;
 }
 
@@ -1042,7 +1042,7 @@ nav {
     font-size: 1.1em;
     padding: 12px;
     background: #ffffff; /* White background for contrast */
-    border-left: 5px solid #66BB6A; /* Accent border for each item */
+    border-left: 5px solid #668bbb; /* Accent border for each item */
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1051,13 +1051,13 @@ nav {
 .guidelines-list li:hover {
     transform: translateX(10px); /* Slide to the right on hover */
     box-shadow: 0 5px 15px rgba(66, 110, 54, 0.2);
-    background: rgba(235, 255, 235, 0.95); /* Slightly different background */
+    background: rgba(235, 247, 255, 0.95); /* Slightly different background */
 }
 
 /* Strong Text for Emphasis */
 .guidelines-list li strong {
     font-weight: bold;
-    color: #2E7D32; /* Deep green for highlights */
+    color: #2e537d; /* Deep green for highlights */
 }
 
 /* Responsive Design for Smaller Screens */
@@ -1077,7 +1077,7 @@ nav {
 
 .guidelines-section {
     padding: 60px 30px;
-    background-color: #f4f9f4;
+    background-color: #f4f6f9;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     margin: 50px auto;
@@ -1087,7 +1087,7 @@ nav {
 .guidelines-section h2 {
     font-family: 'Cinzel', serif;
     font-size: 2.4em;
-    color: #2E7D32;
+    color: #2e507d;
     text-align: center;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -1103,20 +1103,20 @@ nav {
 .guideline-item {
     padding: 20px;
     background-color: #ffffff;
-    border-left: 5px solid #8BC34A;
+    border-left: 5px solid #4a7ac3;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, border-left 0.3s;
 }
 
 .guideline-item:hover {
-    background-color: #f0f5f0;
-    border-left: 5px solid #66BB6A;
+    background-color: #f0f2f5;
+    border-left: 5px solid #6695bb;
 }
 
 .guideline-item h3 {
     font-size: 1.6em;
-    color: #1B5E20;
+    color: #1b305e;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -1131,17 +1131,17 @@ nav {
     float: left;
     margin-right: 15px;
     font-size: 2em;
-    color: #4CAF50;
+    color: #4c74af;
     transition: color 0.3s;
 }
 
 .guideline-item:hover .guideline-icon {
-    color: #388E3C;
+    color: #38608e;
 }
 
 .elimination-round-section {
     padding: 60px 30px;
-    background-color: #eef5ee;
+    background-color: #eef1f5;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     margin: 50px auto;
@@ -1151,7 +1151,7 @@ nav {
 .elimination-round-section h2 {
     font-family: 'Cinzel', serif;
     font-size: 2.6em;
-    color: #1B5E20;
+    color: #1b325e;
     text-align: center;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -1186,7 +1186,7 @@ nav {
     min-width: 280px;
     text-align: left;
     position: relative;
-    border-left: 5px solid #66BB6A;
+    border-left: 5px solid #668bbb;
 }
 
 .round-item::before {
@@ -1208,13 +1208,13 @@ nav {
 .round-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-    border-left: 5px solid #388E3C;
+    border-left: 5px solid #385a8e;
 }
 
 .round-item h3 {
     font-family: 'Cinzel', serif;
     font-size: 1.8em;
-    color: #2E7D32;
+    color: #2e537d;
     margin-bottom: 15px;
 }
 
@@ -1227,14 +1227,14 @@ nav {
 
 .round-item .round-icon {
     font-size: 3em;
-    color: #4CAF50;
+    color: #4c6faf;
     margin-bottom: 15px;
     display: block;
 }
 
 .final-round-section {
     padding: 60px 30px;
-    background-color: #e9f5e9;
+    background-color: #e9f0f5;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     margin: 50px auto;
@@ -1244,7 +1244,7 @@ nav {
 .final-round-section h2 {
     font-family: 'Cinzel', serif;
     font-size: 2.8em;
-    color: #1B5E20;
+    color: #1b365e;
     text-align: center;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -1279,7 +1279,7 @@ nav {
     min-width: 280px;
     text-align: left;
     position: relative;
-    border-left: 5px solid #81C784;
+    border-left: 5px solid #819fc7;
 }
 
 .final-round-item::before {
@@ -1301,13 +1301,13 @@ nav {
 .final-round-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-    border-left: 5px solid #66BB6A;
+    border-left: 5px solid #6692bb;
 }
 
 .final-round-item h3 {
     font-family: 'Cinzel', serif;
     font-size: 1.8em;
-    color: #2E7D32;
+    color: #2e537d;
     margin-bottom: 15px;
 }
 
@@ -1320,7 +1320,7 @@ nav {
 
 .final-round-item .final-round-icon {
     font-size: 3em;
-    color: #4CAF50;
+    color: #4c66af;
     margin-bottom: 15px;
     display: block;
 }
@@ -1362,7 +1362,7 @@ nav {
 /* Heading for the Awards Section */
 .awards-container h2 {
     font-size: 3em;
-    color: #2E7D32;
+    color: #2e477d;
     margin-bottom: 40px;
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
@@ -1420,7 +1420,7 @@ nav {
 .award h3 {
     font-size: 2em; /* Make titles larger */
     margin-bottom: 15px;
-    color: #2E7D32;
+    color: #2e477d;
 }
 
 .award p {
@@ -1481,7 +1481,7 @@ nav {
     max-height: 400px; /* Limit height */
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 10px;
-    border: 1px solid #66BB6A; /* Accent border color */
+    border: 1px solid #6695bb; /* Accent border color */
     border-radius: 10px;
     background-color: #f7f7f7; /* Light background for contrast */
 }
@@ -1510,13 +1510,13 @@ nav {
 /* Styling for Links */
 .articles-list a {
     text-decoration: none;
-    color: #388E3C; /* Green for text */
+    color: #38608e; /* Green for text */
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .articles-list a:hover {
-    color: #66BB6A; /* Lighter green on hover */
+    color: #669cbb; /* Lighter green on hover */
 }
 
 /* ======================================================
@@ -1525,7 +1525,7 @@ nav {
 /* Heading for Articles Section */
 .articles-container h2 {
     font-size: 2.8em;
-    color: #2E7D32; /* Deep green */
+    color: #2e577d; /* Deep green */
     margin-bottom: 20px;
     text-transform: uppercase;
     text-align: center;
@@ -1545,7 +1545,7 @@ nav {
     max-height: 500px;
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 15px;
-    border: 2px solid #66BB6A; /* Accent border */
+    border: 2px solid #668bbb; /* Accent border */
     border-radius: 15px;
     background-color: #f9f9f9; /* Light contrasting background */
     width: 100%;
@@ -1572,7 +1572,7 @@ nav {
     border-radius: 10px;
     background: linear-gradient(135deg, #E8F5E9, #ffffff); /* Gradient background */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #388E3C; /* Accent border */
+    border-left: 5px solid #385d8e; /* Accent border */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1585,7 +1585,7 @@ nav {
 /* Title & Description in Card */
 .article-card strong {
     font-size: 1.6em;
-    color: #2E7D32;
+    color: #2e4e7d;
     display: block;
     margin-bottom: 8px;
 }
@@ -1614,12 +1614,12 @@ nav {
 }
 
 .scrollable-articles::-webkit-scrollbar-thumb {
-    background: #66BB6A;
+    background: #6695bb;
     border-radius: 5px;
 }
 
 .scrollable-articles::-webkit-scrollbar-thumb:hover {
-    background: #388E3C;
+    background: #38608e;
 }
 
 /* Responsive Design */
@@ -1655,7 +1655,7 @@ nav {
     left: -30px;
     right: -30px;
     bottom: -30px;
-    border: 2px dashed #8BC34A;
+    border: 2px dashed #4ab1c3;
     border-radius: 25px;
     opacity: 0.5;
     z-index: -1;
@@ -1664,7 +1664,7 @@ nav {
 .browse-articles-section h2 {
     font-family: 'Cinzel', serif;
     font-size: 2.8em;
-    color: #1B5E20;
+    color: #1b275e;
     text-align: center;
     margin-bottom: 20px;
     letter-spacing: 1.5px;
@@ -1681,7 +1681,7 @@ nav {
     margin-right: auto;
     margin-bottom: 40px;
     line-height: 1.8;
-    border-left: 4px solid #8BC34A;
+    border-left: 4px solid #4a9dc3;
     padding-left: 20px;
     position: relative;
     animation: fadeInUp 1.5s ease-in-out;
@@ -1703,7 +1703,7 @@ nav {
     display: inline-block;
     padding: 15px 35px;
     border-radius: 50px;
-    background-color: #2E7D32;
+    background-color: #2e437d;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -1713,7 +1713,7 @@ nav {
 }
 
 .btn-view-all:hover {
-    background-color: #1B5E20;
+    background-color: #1b1f5e;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
@@ -1791,7 +1791,7 @@ nav {
 
 /* Table Header Styling */
 .criteria-table thead {
-    background: linear-gradient(135deg, #388E3C, #66BB6A);
+    background: linear-gradient(135deg, #38538e, #668bbb);
     color: #fff;
 }
 
@@ -1841,7 +1841,7 @@ nav {
 /* Section Heading */
 .criteria-container h2 {
     font-size: 3em;
-    color: #2E7D32;
+    color: #2e577d;
     text-align: center;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -1874,7 +1874,7 @@ nav {
 }
 
 .criteria-table th {
-    background-color: #66BB6A; /* Deep green header */
+    background-color: #6684bb; /* Deep green header */
     color: #ffffff; /* White text */
     text-transform: uppercase;
     font-weight: bold;
@@ -1900,13 +1900,13 @@ nav {
 
 /* Cell Styling */
 .criteria-table td {
-    border-left: 5px solid rgba(102, 187, 106, 0.4); /* Left border for emphasis */
+    border-left: 5px solid rgba(102, 142, 187, 0.4); /* Left border for emphasis */
 }
 
 /* Strong Text Styling for Table Cells */
 .criteria-table td:first-child {
     font-weight: bold;
-    color: #2E7D32;
+    color: #2e577d;
 }
 
 /* Criteria Notes Styling */
@@ -1996,7 +1996,7 @@ nav {
 /* Social Icon Hover Effect */
 .social-media a:hover {
     transform: translateY(-5px);
-    color: #AED581; /* Light green on hover */
+    color: #81bdd5; /* Light green on hover */
 }
 
 /* Footer Bottom */
@@ -2034,7 +2034,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: linear-gradient(135deg, #8BC34A, #1B5E20); /* Soft nature-inspired gradient */
+    background: linear-gradient(135deg, #4a93c3, #1b305e); /* Soft nature-inspired gradient */
     background-size: 200% 200%; /* For smooth animations */
     animation: gradient-move 12s ease infinite;
     color: #222;
@@ -2056,12 +2056,12 @@ body {
 .form-container h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #2E7D32; /* Deep green */
+    color: #2e4e7d; /* Deep green */
 }
 
 /* Back to Home Button Styling */
 .back-home-btn {
-    background: #388E3C;
+    background: #38538e;
     color: #fff;
     padding: 10px 20px;
     font-weight: bold;
@@ -2076,7 +2076,7 @@ body {
 .back-home-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(56, 142, 60, 0.4);
-    background: #66BB6A; /* Lighter green */
+    background: #668ebb; /* Lighter green */
 }
 
 /* Form Group Styling */
@@ -2099,7 +2099,7 @@ select {
     padding: 12px;
     margin-top: 8px;
     border-radius: 8px;
-    border: 2px solid #8BC34A;
+    border: 2px solid #4a93c3;
     font-size: 1em;
     transition: all 0.3s ease;
 }
@@ -2109,13 +2109,13 @@ input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    border-color: #388E3C;
-    box-shadow: 0 0 8px rgba(56, 142, 60, 0.5); /* Glowing effect */
+    border-color: #38568e;
+    box-shadow: 0 0 8px rgba(56, 93, 142, 0.5); /* Glowing effect */
 }
 
 /* Submit Button Styling */
 .submit-btn {
-    background: #388E3C;
+    background: #38608e;
     color: #fff;
     padding: 15px 40px;
     font-size: 1.2em;
@@ -2130,7 +2130,7 @@ select:focus {
 .submit-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(56, 142, 60, 0.5);
-    background: #66BB6A;
+    background: #668bbb;
 }
 
 /* Smooth animations for background */
@@ -2184,8 +2184,8 @@ input:focus,
 textarea:focus,
 select:focus {
     outline: none;
-    border-color: #66BB6A;
-    box-shadow: 0 0 15px rgba(173, 255, 47, 0.7);
+    border-color: #6684bb;
+    box-shadow: 0 0 15px rgba(47, 224, 255, 0.7);
     transform: scale(1.02);
 }
 
@@ -2197,18 +2197,18 @@ select:focus {
 }
 
 @keyframes glow-pulse {
-    from { text-shadow: 0 0 15px rgba(229, 255, 227, 0.8), 0 0 30px rgba(56, 142, 60, 0.6); }
-    to { text-shadow: 0 0 30px rgba(56, 142, 60, 0.8), 0 0 60px rgba(56, 142, 60, 0.6); }
+    from { text-shadow: 0 0 15px rgba(229, 255, 227, 0.8), 0 0 30px rgba(56, 79, 142, 0.6); }
+    to { text-shadow: 0 0 30px rgba(56, 110, 142, 0.8), 0 0 60px rgba(56, 93, 142, 0.6); }
 }
 
 .about-section, .registration-section, .hero-content-box, .award, .awards-section, .combined-section, .criteria-section, .articles-section {
-    border-top: 15px solid #8BC34A;
-    border-bottom: 15px solid #8BC34A;
+    border-top: 15px solid #4a89c3;
+    border-bottom: 15px solid #4a93c3;
     margin-bottom: 100px;
 }
 
 .cta-button {
-    background-color: #66BB6A;
+    background-color: #6699bb;
     color: #fff;
     padding: 15px 25px;
     border-radius: 8px;
@@ -2216,7 +2216,7 @@ select:focus {
 }
 
 .cta-button:hover {
-    background-color: #1B5E20;
+    background-color: #1b365e;
 }
 
 .section {
