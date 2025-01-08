@@ -205,6 +205,15 @@
             transition: all 0.3s ease;
         }
 
+        h1 {
+            background: #1b1f5e;
+            padding: 20px 30x;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            margin-bottom: 50px;
+        }
+
     </style>
 </head>
 <body>
@@ -212,13 +221,14 @@
 
 <!-- Browse Articles Section -->
 <section id="articles-section" class="articles-section">
-    <h2>Browse Articles</h2>
+    <h2>LIST OF JOURNAL ARTICLES</h2>
     <p class="articles-description">Dive into a curated selection of insightful articles!</p>
 
     <a href="{{ url_for('index') }}" class="back-home-btn">
         Back to Home
     </a>
 
+    <h1> </h1>
     <h1>INDUSTRIAL ENGINEERING</h1>
     <!-- Articles Grid Container -->
     <div class="articles-container">
@@ -295,10 +305,11 @@
             </h3>
             <a href="https://www.sciencedirect.com/journal/transportation-research-part-e-logistics-and-transportation-review " target="_blank" class="read-more-btn" aria-label="Read More">Read More</a>
         </div>
+    </div>
 
-
+    <h1> </h1>
     <h1>DATA SCIENCE</h1>
-    <div class="articles-container"></div>
+    <div class="articles-container">
 
         <!-- Article 1 -->
         <div class="article-card">
@@ -349,9 +360,11 @@
             </h3>
             <a href="https://pubsonline.informs.org/journal/opre" target="_blank" class="read-more-btn" aria-label="Read More">Read More</a>
         </div>
-
+    </div>
+    
+<h1> </h1>
 <h1>INFORMATION TECHNOLOGY</h1>
-<div class="articles-container"></div>
+<div class="articles-container">
 
         <!-- Article 1 -->
         <div class="article-card">
@@ -401,9 +414,11 @@
             </h3>
             <a href="https://www.sciencedirect.com/journal/telematics-and-informatics" target="_blank" class="read-more-btn" aria-label="Read More">Read More</a>
         </div>
-  
+    </div>
+
+<h1> </h1>
 <h1>CIVIL ENGINEERING</h1>     
-<div class="articles-container"></div>   
+<div class="articles-container">
 
         <!-- Article 1 -->
         <div class="article-card">
@@ -425,6 +440,12 @@
             <a href="https://www.tandfonline.com/journals/tjcm20" target="_blank" class="read-more-btn" aria-label="Read More">Read More</a>
         </div>
     </div>
+
+    <h1> </h1>
+    <h1> </h1>
+    <a href="{{ url_for('index') }}" class="back-home-btn">
+        Back to Home
+    </a>
 </section>
 
 </body>
