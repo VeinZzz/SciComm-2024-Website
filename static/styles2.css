@@ -17,6 +17,93 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ======================================================
+   General Body Styling
+====================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #4a93c3, #1b305e);
+    background-size: 200% 200%;
+    animation: gradient-move 12s ease infinite;
+    color: #222;
+    font-size: 18px;
+}
+
+/* ======================================================
+   General Body Font
+====================================================== */
+body {
+    font-family: 'Crimson Text', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+
+/* ======================================================
+   Navbar Styles
+====================================================== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #003366;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Toggle Button for Responsive Navbar */
+nav button {
+    display: none;
+}
+
+/* ======================================================
+   Button Adjustments
+====================================================== */
+.cta-button {
+    background-color: #6699bb;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+/* ======================================================
+   Responsive Styles
+====================================================== */
+@media (max-width: 768px) {
+    nav button {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .card {
+        margin: 10px;
+    }
+}
+
 
 /* General Body Font */
 body {
