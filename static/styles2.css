@@ -20,18 +20,15 @@ html {
 /* ======================================================
    General Body Styling
 ====================================================== */
-/* Consolidated General Body Styling */
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden;
     background: linear-gradient(135deg, #4a93c3, #1b305e);
     background-size: 200% 200%;
     animation: gradient-move 12s ease infinite;
     color: #222;
-    font-size: 16px; /* Base font size for scaling */
-    line-height: 1.5; /* Improves readability */
-    font-family: 'Crimson Text', serif;
+    font-size: 18px;
 }
 
 /* ======================================================
@@ -79,9 +76,10 @@ nav button {
     transition: background-color 0.3s;
 }
 
-/* Responsive Styles */
+/* ======================================================
+   Responsive Styles
+====================================================== */
 @media (max-width: 768px) {
-    /* Navbar */
     nav button {
         display: block;
     }
@@ -101,29 +99,8 @@ nav button {
         display: flex;
     }
 
-    /* General Scaling for Texts */
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 1.5rem; /* Scale down for mobile */
-    }
-
-    p, a, li {
-        font-size: 0.9rem; /* Smaller font for better fit */
-    }
-
-    /* Section and Card Adjustments */
     .card {
         margin: 10px;
-        padding: 10px;
-    }
-
-    .section {
-        margin: 20px auto;
-        padding: 10px;
-    }
-
-    .cta-button {
-        padding: 10px 15px; /* Adjust button size */
-        font-size: 0.9rem;
     }
 }
 
@@ -145,23 +122,24 @@ p, a, li, .article-snippet, .article-title, .criteria-description, .guidelines-l
     font-family: 'Crimson Text', serif;
 }
 
-/* Applying animated gradient */
+/* Applying the animated gradient */
 body::before {
     content: "";
-    position: fixed;
+    position: fixed; /* Changed to fixed to cover the viewport */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* Send the gradient to the back */
     background: linear-gradient(120deg, 
-        #01c1fc, 
-        #243e5f, 
-        #4a6078, 
-        #3d428b, 
-        #7b96b9);
-    background-size: 400% 400%;
-    animation: gradient-animation 8s ease-in-out infinite;
+        #01c1fc, /* light green */
+        #243e5f, /* deep teal */
+        #4a6078, /* very light green */
+        #3d428b, /* teal green */
+        #7b96b9  /* muted green */
+    );
+    background-size: 400% 400%; /* Large size for smoother animation */
+    animation: gradient-animation 8s ease-in-out infinite; /* Speed up and loop */
 }
 
 /* Updated Keyframes for Gradient Movement */
