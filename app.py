@@ -1,31 +1,27 @@
 import os
-import psycopg2
 from flask import Flask, render_template, request, jsonify
+from psycopg2 import pool
 
 app = Flask(__name__)
 
 # Use environment variables for database credentials
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
-def init_db():
-    conn = psycopg2.connect(DATABASE_URL)
-    cursor = conn.cursor()
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS registrations (
-            id SERIAL PRIMARY KEY,
-            team_name TEXT NOT NULL,
-            school TEXT NOT NULL,
-            coach_name TEXT NOT NULL,
-            members_count INTEGER NOT NULL,
-            members_info TEXT NOT NULL,
-            topic TEXT NOT NULL,
-            timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
-    ''')
-    conn.commit()
-    conn.close()
+# Initialize connection pool
+db_pool = pool.SimpleConnectionPool(1, 20, DATABASE_URL)
 
-init_db()
+def get_db_connection():
+    try:
+        connection = db_pool.getconn()
+        if connection.closed:
+            raise Exception("Connection is closed")
+        return connection
+    except Exception as e:
+        print(f"Error getting connection: {e}")
+        return None
+
+def release_db_connection(conn):
+    db_pool.putconn(conn)
 
 @app.route('/')
 def index():
@@ -47,14 +43,14 @@ def registration_form():
         topic = data['pdf-file']
 
         try:
-            conn = psycopg2.connect(DATABASE_URL)
+            conn = get_db_connection()
             cursor = conn.cursor()
             cursor.execute('''
                 INSERT INTO registrations (team_name, school, coach_name, members_count, members_info, topic)
                 VALUES (%s, %s, %s, %s, %s, %s)
             ''', (team_name, school, coach_name, members_count, members_info, topic))
             conn.commit()
-            conn.close()
+            release_db_connection(conn)
             return jsonify({'status': 'success', 'message': 'Registration successful!'})
         except Exception as e:
             return jsonify({'status': 'error', 'message': str(e)})
@@ -63,27 +59,20 @@ def registration_form():
 
 @app.route('/admin')
 def view_registrations():
-    conn = psycopg2.connect(DATABASE_URL)
+    page = request.args.get('page', 1, type=int)
+    per_page = 20
+
+    conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM registrations')
+    cursor.execute('SELECT COUNT(*) FROM registrations')
+    total_count = cursor.fetchone()[0]
+
+    cursor.execute('SELECT * FROM registrations ORDER BY timestamp DESC LIMIT %s OFFSET %s',
+                   (per_page, (page - 1) * per_page))
     rows = cursor.fetchall()
-    conn.close()
-    return render_template('admin.html', rows=rows)
+    release_db_connection(conn)
 
-# PostgreSQL connection function
-def get_db_connection():
-    connection = psycopg2.connect(
-        host="dpg-ctu05kbv2p9s738nf4l0-a",  # Your Hostname
-        port="5432",  # Default PostgreSQL port
-        database="scicomm2024_data_3",  # Your Database name
-        user="scicomm2024_data_3_user",  # Your Username
-        password="wISRudQHg1ZKkDdTs9Cu05GfxfVtXuV0"  # Your Password from Render
-    )
-    return connection
-
-init_db()
-
+    return render_template('admin.html', rows=rows, total_count=total_count, page=page, per_page=per_page)
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    app.run()
